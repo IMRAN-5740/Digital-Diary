@@ -61,7 +61,7 @@ namespace Digital.Diary.Databases.Migrations
                         principalSchema: "Academic",
                         principalTable: "Faculty",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -82,7 +82,7 @@ namespace Digital.Diary.Databases.Migrations
                         principalSchema: "Academic",
                         principalTable: "Faculty",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -107,7 +107,7 @@ namespace Digital.Diary.Databases.Migrations
                         principalSchema: "Academic",
                         principalTable: "Department",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -133,25 +133,25 @@ namespace Digital.Diary.Databases.Migrations
                         principalSchema: "Academic",
                         principalTable: "Department",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Teacher_Designation_DesignationId",
                         column: x => x.DesignationId,
                         principalSchema: "Academic",
                         principalTable: "Designation",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Teacher_Faculty_FacultyId",
                         column: x => x.FacultyId,
                         principalSchema: "Academic",
                         principalTable: "Faculty",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "TeacherFaculty",
+                name: "TeachersFaculty",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -160,16 +160,16 @@ namespace Digital.Diary.Databases.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TeacherFaculty", x => x.Id);
+                    table.PrimaryKey("PK_TeachersFaculty", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TeacherFaculty_Faculty_FacultyId",
+                        name: "FK_TeachersFaculty_Faculty_FacultyId",
                         column: x => x.FacultyId,
                         principalSchema: "Academic",
                         principalTable: "Faculty",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_TeacherFaculty_Teacher_TeacherId",
+                        name: "FK_TeachersFaculty_Teacher_TeacherId",
                         column: x => x.TeacherId,
                         principalSchema: "Academic",
                         principalTable: "Teacher",
@@ -214,13 +214,13 @@ namespace Digital.Diary.Databases.Migrations
                 column: "FacultyId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TeacherFaculty_FacultyId",
-                table: "TeacherFaculty",
+                name: "IX_TeachersFaculty_FacultyId",
+                table: "TeachersFaculty",
                 column: "FacultyId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TeacherFaculty_TeacherId",
-                table: "TeacherFaculty",
+                name: "IX_TeachersFaculty_TeacherId",
+                table: "TeachersFaculty",
                 column: "TeacherId");
         }
 
@@ -236,7 +236,7 @@ namespace Digital.Diary.Databases.Migrations
                 schema: "Academic");
 
             migrationBuilder.DropTable(
-                name: "TeacherFaculty");
+                name: "TeachersFaculty");
 
             migrationBuilder.DropTable(
                 name: "Teacher",

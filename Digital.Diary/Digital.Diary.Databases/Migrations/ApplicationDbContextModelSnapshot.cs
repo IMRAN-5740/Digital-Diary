@@ -197,15 +197,15 @@ namespace Digital.Diary.Databases.Migrations
 
                     b.HasIndex("TeacherId");
 
-                    b.ToTable("TeacherFaculty");
+                    b.ToTable("TeachersFaculty");
                 });
 
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.CrTable", b =>
                 {
                     b.HasOne("Digital.Diary.Models.EntityModels.Academic.Department", "Department")
-                        .WithMany()
+                        .WithMany("CrTables")
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Department");
@@ -214,9 +214,9 @@ namespace Digital.Diary.Databases.Migrations
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Dean", b =>
                 {
                     b.HasOne("Digital.Diary.Models.EntityModels.Academic.Faculty", "Faculty")
-                        .WithMany()
+                        .WithMany("Deans")
                         .HasForeignKey("FacultyId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Faculty");
@@ -225,9 +225,9 @@ namespace Digital.Diary.Databases.Migrations
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Department", b =>
                 {
                     b.HasOne("Digital.Diary.Models.EntityModels.Academic.Faculty", "Faculty")
-                        .WithMany()
+                        .WithMany("Departments")
                         .HasForeignKey("FacultyId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Faculty");
@@ -236,21 +236,21 @@ namespace Digital.Diary.Databases.Migrations
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Teacher", b =>
                 {
                     b.HasOne("Digital.Diary.Models.EntityModels.Academic.Department", "Department")
-                        .WithMany()
+                        .WithMany("Teachers")
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Digital.Diary.Models.EntityModels.Academic.Designation", "Designation")
                         .WithMany()
                         .HasForeignKey("DesignationId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Digital.Diary.Models.EntityModels.Academic.Faculty", "Faculty")
-                        .WithMany()
+                        .WithMany("Teachers")
                         .HasForeignKey("FacultyId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Department");
@@ -263,7 +263,7 @@ namespace Digital.Diary.Databases.Migrations
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.TeacherFaculty", b =>
                 {
                     b.HasOne("Digital.Diary.Models.EntityModels.Academic.Faculty", "Faculty")
-                        .WithMany("TeacherFaculties")
+                        .WithMany()
                         .HasForeignKey("FacultyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -279,9 +279,20 @@ namespace Digital.Diary.Databases.Migrations
                     b.Navigation("Teacher");
                 });
 
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Department", b =>
+                {
+                    b.Navigation("CrTables");
+
+                    b.Navigation("Teachers");
+                });
+
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Faculty", b =>
                 {
-                    b.Navigation("TeacherFaculties");
+                    b.Navigation("Deans");
+
+                    b.Navigation("Departments");
+
+                    b.Navigation("Teachers");
                 });
 #pragma warning restore 612, 618
         }

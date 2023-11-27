@@ -6,15 +6,13 @@ namespace Digital.Diary.Models.EntityModels.Academic
     [Table(nameof(Faculty), Schema = "Academic")]
     public class Faculty
     {
-        public Faculty()
-        {
-            TeacherFaculties = new List<TeacherFaculty>();
-        }
-
         public Guid Id { get; set; }
 
         [DisplayName("Faculty Name")]
         public string FacultyName { get; set; } = default!;
-        public virtual ICollection<TeacherFaculty> TeacherFaculties { get; set; }
+
+        public ICollection<Department> Departments { get; set; } = new List<Department>();
+        public ICollection<Teacher> Teachers { get; set; } = new List<Teacher>();
+        public ICollection<Dean> Deans { get; set; } = new List<Dean>();
     }
 }

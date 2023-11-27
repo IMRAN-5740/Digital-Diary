@@ -25,33 +25,55 @@ namespace Digital.Diary.Databases.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configure relationships and cascade behaviors
+            // Define relationships and constraints
+
+            // Teacher to Designation (Many-to-One)
             modelBuilder.Entity<Teacher>()
                 .HasOne(t => t.Designation)
                 .WithMany()
                 .HasForeignKey(t => t.DesignationId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            // Teacher to Faculty (Many-to-One)
             modelBuilder.Entity<Teacher>()
                 .HasOne(t => t.Faculty)
-                .WithMany(f => f.TeacherFaculties)
+                .WithMany(f => f.Teachers)
                 .HasForeignKey(t => t.FacultyId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            // Teacher to Department (Many-to-One)
             modelBuilder.Entity<Teacher>()
                 .HasOne(t => t.Department)
-                .WithMany()
+                .WithMany(d => d.Teachers)
                 .HasForeignKey(t => t.DepartmentId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            // Department to Faculty (One-to-One or Many-to-One, based on your design)
             modelBuilder.Entity<Department>()
                 .HasOne(d => d.Faculty)
                 .WithMany(f => f.Departments)
                 .HasForeignKey(d => d.FacultyId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // ... other configurations ...
+            // Dean to Faculty (Many-to-One)
+            modelBuilder.Entity<Dean>()
+                .HasOne(d => d.Faculty)
+                .WithMany(f => f.Deans)
+                .HasForeignKey(d => d.FacultyId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // CrTable to Department (Many-to-One)
+            modelBuilder.Entity<CrTable>()
+                .HasOne(cr => cr.Department)
+                .WithMany(d => d.CrTables)
+                .HasForeignKey(cr => cr.DepartmentId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Other configurations...
+
+            // Adjust cascade behaviors as needed
         }
+
 
 
 
