@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Digital.Diary.Models.EntityModels.Administrative.Administration
 {
-    public class Director:BaseEntity
+    public class Director:BaseUserTable
     {
 
     }

@@ -9,3 +9,4 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories\obj\Debug\net8.0\Digit
 E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories\obj\Debug\net8.0\refint\Digital.Diary.Repositories.dll
 E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories\obj\Debug\net8.0\Digital.Diary.Repositories.pdb
 E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories\obj\Debug\net8.0\ref\Digital.Diary.Repositories.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories\obj\Debug\net8.0\Digital.Diary.Repositories.sourcelink.json

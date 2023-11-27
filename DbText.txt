@@ -1,0 +1,103 @@
+
+Academic Section:
+
+BaseUserTable:
+=> Id
+=> Name
+=> Email
+=> PhoneNum
+
+
+CrTable:BaseUserTable
+=> Select Year
+=> Select Faculty(FaculrtId)
+=> Select Department(DepartmentId)
+
+FacultyTable: BaseUserTable
+=> FacultyName
+=> List of Department(DepartmentId)
+=> DeanId(Dean Details)
+=> StaffName
+=> CrId(Cr Details)
+
+
+DepartmentTable:
+=> Id
+=> DeptName
+=> Select Faculty(FacultyId)
+=> 
+
+
+DesignationTable:
+=> Id
+=> Name
+
+
+
+
+TeachersUserTable:BaseUserTable
+
+=> Select Designation(DesignationId)
+=> Select Faculty(FacultyId)
+=> Select Department(Based on Faculty)
+=>
+
+
+Dean Table:BaseUserTable
+=> Select Faculty(FacultyId)
+
+
+
+
+
+
+
+
+
+
+Administration:
+
+
+AUserTable:
+=> Id
+=> Name
+=> Designation
+=> Email
+=> PhoneNum
+=> Select Office
+=> Select Branch
+=> 
+
+
+OfficeTable
+=> Id
+=> OfficeName
+
+
+
+DiretorTable:AUserTable
+=> Select Office
+=> 
+
+
+RegistrarOffice:AUserTable
+=> Select Office
+
+
+BranchTable:
+=> Id
+=> BranchName
+=>Select Registrar
+
+EstablishmentBranch:AUserTable
+=> Select Office
+=> Select 
+
+
+
+
+
+
+
+
+
