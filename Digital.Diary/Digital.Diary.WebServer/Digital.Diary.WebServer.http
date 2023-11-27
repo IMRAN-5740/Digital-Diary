@@ -1,0 +1,6 @@
+@Digital.Diary.WebServer_HostAddress = http://localhost:5116
+
+GET {{Digital.Diary.WebServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
