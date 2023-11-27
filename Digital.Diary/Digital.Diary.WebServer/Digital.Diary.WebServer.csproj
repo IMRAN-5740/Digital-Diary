@@ -11,4 +11,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Digital.Diary.Databases\Digital.Diary.Databases.csproj" />
+  </ItemGroup>
+
 </Project>
