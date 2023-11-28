@@ -16,6 +16,7 @@ namespace Digital.Diary.Models.EntityModels.Academic
         public Faculty Faculty { get; set; } = default!;
 
         public ICollection<Teacher> Teachers { get; set; } = new List<Teacher>();
+        public ICollection<Staff> Staffs { get; set; } = new List<Staff>();
 
         public ICollection<CrTable> CrTables { get; set; } = new List<CrTable>();
 
