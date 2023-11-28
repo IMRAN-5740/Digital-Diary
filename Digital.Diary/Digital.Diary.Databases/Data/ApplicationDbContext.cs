@@ -21,6 +21,7 @@ namespace Digital.Diary.Databases.Data
         public DbSet<Faculty> Faculties { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Staff> Staffs { get; set; }
+        public DbSet<Council> Councils { get; set; }
 
         public DbSet<TeacherFaculty> TeachersFaculty { get; set; }
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -136,6 +137,13 @@ namespace Digital.Diary.Databases.Data
                 .WithMany(d => d.Staffs)
                 .HasForeignKey(s => s.DepartmentId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            // Council to Designation (Many-to-One)
+            modelBuilder.Entity<Council>()
+               .HasOne(c => c.Designation)
+               .WithMany()
+               .HasForeignKey(c => c.DesignationId)
+               .OnDelete(DeleteBehavior.Restrict);
 
             // Other configurations...
 
