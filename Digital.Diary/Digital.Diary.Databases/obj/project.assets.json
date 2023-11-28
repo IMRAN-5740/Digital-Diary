@@ -1477,6 +1477,16 @@
             "rid": "win"
           }
         }
+      },
+      "Digital.Diary.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Digital.Diary.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Digital.Diary.Models.dll": {}
+        }
       }
     }
   },
@@ -4006,10 +4016,16 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Digital.Diary.Models/1.0.0": {
+      "type": "project",
+      "path": "../Digital.Diary.Models/Digital.Diary.Models.csproj",
+      "msbuildProject": "../Digital.Diary.Models/Digital.Diary.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Digital.Diary.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0",
@@ -4048,7 +4064,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Models\\Digital.Diary.Models.csproj": {
+              "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Models\\Digital.Diary.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

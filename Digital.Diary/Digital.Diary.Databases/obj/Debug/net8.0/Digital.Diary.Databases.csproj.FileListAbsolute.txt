@@ -9,3 +9,10 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.Databases\obj\Debug\net8.0\Digital.
 E:\Digital Diary\Digital.Diary\Digital.Diary.Databases\obj\Debug\net8.0\refint\Digital.Diary.Databases.dll
 E:\Digital Diary\Digital.Diary\Digital.Diary.Databases\obj\Debug\net8.0\Digital.Diary.Databases.pdb
 E:\Digital Diary\Digital.Diary\Digital.Diary.Databases\obj\Debug\net8.0\ref\Digital.Diary.Databases.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.Databases\bin\Debug\net8.0\Digital.Diary.Databases.runtimeconfig.json
+E:\Digital Diary\Digital.Diary\Digital.Diary.Databases\obj\Debug\net8.0\Digital.Diary.Databases.csproj.AssemblyReference.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.Databases\obj\Debug\net8.0\Digital.Diary.Databases.sourcelink.json
+E:\Digital Diary\Digital.Diary\Digital.Diary.Databases\obj\Debug\net8.0\Digital.Diary.Databases.genruntimeconfig.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.Databases\bin\Debug\net8.0\Digital.Diary.Models.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.Databases\bin\Debug\net8.0\Digital.Diary.Models.pdb
+E:\Digital Diary\Digital.Diary\Digital.Diary.Databases\obj\Debug\net8.0\Digital.Diary.Databases.csproj.CopyComplete

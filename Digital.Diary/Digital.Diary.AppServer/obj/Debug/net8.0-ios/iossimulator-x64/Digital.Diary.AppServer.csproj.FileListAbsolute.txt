@@ -310,3 +310,4 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\ioss
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\Digital.Diary.AppServer.pdb
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\Digital.Diary.AppServer.genruntimeconfig.cache
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\ref\Digital.Diary.AppServer.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\Digital.Diary.AppServer.sourcelink.json
