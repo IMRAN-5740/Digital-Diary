@@ -4,6 +4,7 @@ using Digital.Diary.Databases.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Digital.Diary.Databases.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231128194711_AddAssosiation_and_AssociationEmployeeTableAdministrationSection")]
+    partial class AddAssosiation_and_AssociationEmployeeTableAdministrationSection
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -307,9 +310,6 @@ namespace Digital.Diary.Databases.Migrations
                     b.Property<Guid>("AssociationId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("DesignationId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -328,8 +328,6 @@ namespace Digital.Diary.Databases.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AssociationId");
-
-                    b.HasIndex("DesignationId");
 
                     b.ToTable("AssociationEmployee", "Administration.Associations");
                 });
@@ -358,9 +356,6 @@ namespace Digital.Diary.Databases.Migrations
                     b.Property<Guid>("CommitteeId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("DesignationId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -379,8 +374,6 @@ namespace Digital.Diary.Databases.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CommitteeId");
-
-                    b.HasIndex("DesignationId");
 
                     b.ToTable("CommitteeEmployee", "Administration.Committees");
                 });
@@ -406,9 +399,6 @@ namespace Digital.Diary.Databases.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("DesignationId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -428,8 +418,6 @@ namespace Digital.Diary.Databases.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("DesignationId");
 
                     b.HasIndex("OfficeId");
 
@@ -579,15 +567,7 @@ namespace Digital.Diary.Databases.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
-                        .WithMany()
-                        .HasForeignKey("DesignationId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.Navigation("Association");
-
-                    b.Navigation("Designation");
                 });
 
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Committees.CommitteeEmployee", b =>
@@ -598,32 +578,16 @@ namespace Digital.Diary.Databases.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
-                        .WithMany()
-                        .HasForeignKey("DesignationId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.Navigation("Committee");
-
-                    b.Navigation("Designation");
                 });
 
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Offices.OfficeEmployee", b =>
                 {
-                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
-                        .WithMany()
-                        .HasForeignKey("DesignationId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("Digital.Diary.Models.EntityModels.Administration.Offices.Office", "Office")
                         .WithMany("OfficeEmployees")
                         .HasForeignKey("OfficeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Designation");
 
                     b.Navigation("Office");
                 });

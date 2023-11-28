@@ -1,5 +1,4 @@
-﻿using Digital.Diary.Models.EntityModels.Academic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Digital.Diary.Models.EntityModels.Administration.Offices
 {
@@ -9,6 +8,5 @@ namespace Digital.Diary.Models.EntityModels.Administration.Offices
         public Guid Id { get; set; } = default!;
         public string OfficeName { get; set; } = default!;
         public ICollection<OfficeEmployee>? OfficeEmployees { get; set; } = new List<OfficeEmployee>();
-
     }
 }
