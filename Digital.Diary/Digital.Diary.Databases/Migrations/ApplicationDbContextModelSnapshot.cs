@@ -139,21 +139,6 @@ namespace Digital.Diary.Databases.Migrations
                     b.ToTable("Department", "Academic");
                 });
 
-            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Designation", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("DesignationName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Designation", "Academic");
-                });
-
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Faculty", b =>
                 {
                     b.Property<Guid>("Id")
@@ -167,6 +152,37 @@ namespace Digital.Diary.Databases.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Faculty", "Academic");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.RegentBoard", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DesignationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DesignationId");
+
+                    b.ToTable("RegentBoard", "Academic");
                 });
 
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Staff", b =>
@@ -267,9 +283,70 @@ namespace Digital.Diary.Databases.Migrations
                     b.ToTable("TeachersFaculty");
                 });
 
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Offices.Office", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("OfficeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Office", "Administration.Offices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Offices.OfficeEmployee", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("OfficeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("PhoneNum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OfficeId");
+
+                    b.ToTable("OfficeEmployee", "Administration.Offices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Common.Designation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("DesignationName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Designation", "CommonEntity");
+                });
+
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Council", b =>
                 {
-                    b.HasOne("Digital.Diary.Models.EntityModels.Academic.Designation", "Designation")
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
                         .WithMany()
                         .HasForeignKey("DesignationId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -311,6 +388,17 @@ namespace Digital.Diary.Databases.Migrations
                     b.Navigation("Faculty");
                 });
 
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.RegentBoard", b =>
+                {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
+                        .WithMany()
+                        .HasForeignKey("DesignationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Designation");
+                });
+
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Staff", b =>
                 {
                     b.HasOne("Digital.Diary.Models.EntityModels.Academic.Department", "Department")
@@ -319,7 +407,7 @@ namespace Digital.Diary.Databases.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Digital.Diary.Models.EntityModels.Academic.Designation", "Designation")
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
                         .WithMany()
                         .HasForeignKey("DesignationId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -338,7 +426,7 @@ namespace Digital.Diary.Databases.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Digital.Diary.Models.EntityModels.Academic.Designation", "Designation")
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
                         .WithMany()
                         .HasForeignKey("DesignationId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -376,6 +464,17 @@ namespace Digital.Diary.Databases.Migrations
                     b.Navigation("Teacher");
                 });
 
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Offices.OfficeEmployee", b =>
+                {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Administration.Offices.Office", "Office")
+                        .WithMany("OfficeEmployees")
+                        .HasForeignKey("OfficeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Office");
+                });
+
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Department", b =>
                 {
                     b.Navigation("CrTables");
@@ -392,6 +491,11 @@ namespace Digital.Diary.Databases.Migrations
                     b.Navigation("Departments");
 
                     b.Navigation("Teachers");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Offices.Office", b =>
+                {
+                    b.Navigation("OfficeEmployees");
                 });
 #pragma warning restore 612, 618
         }

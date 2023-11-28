@@ -1,19 +1,16 @@
 ﻿using Digital.Diary.Models.EntityModels.Academic;
+using Digital.Diary.Models.EntityModels.Administration.Offices;
+using Digital.Diary.Models.EntityModels.Common;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Digital.Diary.Databases.Data
 {
-    public class ApplicationDbContext:DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            
         }
+        #region Academic
         public DbSet<CrTable> CrTables { get; set; }
         public DbSet<Dean> Deans { get; set; }
         public DbSet<Department> Departments { get; set; }
@@ -22,6 +19,15 @@ namespace Digital.Diary.Databases.Data
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Council> Councils { get; set; }
+        public DbSet<RegentBoard> RegentBoards { get; set; }
+        #endregion Academic
+        #region Administration
+        public DbSet<Office> Offices { get; set; }
+        public DbSet<OfficeEmployee> OfficeEmployees { get; set; }
+
+        #endregion Administration
+
+
 
         public DbSet<TeacherFaculty> TeachersFaculty { get; set; }
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -89,7 +95,7 @@ namespace Digital.Diary.Databases.Data
                 .HasForeignKey(t => t.DesignationId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Teacher to Faculty (Many-to-One)
+           // Teacher to Faculty(Many - to - One)
             modelBuilder.Entity<Teacher>()
                 .HasOne(t => t.Faculty)
                 .WithMany(f => f.Teachers)
@@ -145,13 +151,35 @@ namespace Digital.Diary.Databases.Data
                .HasForeignKey(c => c.DesignationId)
                .OnDelete(DeleteBehavior.Restrict);
 
+            // RegentBoard to Designation (Many-to-One)
+            modelBuilder.Entity<RegentBoard>()
+               .HasOne(c => c.Designation)
+               .WithMany()
+               .HasForeignKey(c => c.DesignationId)
+               .OnDelete(DeleteBehavior.Restrict);
+
+
+
+            // OfficeEmployee to Office (Many-to-One)
+
+            modelBuilder.Entity<OfficeEmployee>()
+              .HasOne(c => c.Office)
+              .WithMany()
+              .HasForeignKey(c => c.OfficeId)
+              .OnDelete(DeleteBehavior.Restrict);
+
+
+            // Office to OfficeEmployee (One-to-Many)
+
+            modelBuilder.Entity<Office>()
+       .HasMany(o => o.OfficeEmployees)
+       .WithOne(oe => oe.Office)
+       .HasForeignKey(oe => oe.OfficeId)
+       .OnDelete(DeleteBehavior.Cascade);
+
             // Other configurations...
 
             // Adjust cascade behaviors as needed
         }
-
-
-
-
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Digital.Diary.Models.EntityModels.Academic
+namespace Digital.Diary.Models.EntityModels.Common
 {
-    [Table(nameof(Designation), Schema = "Academic")]
+    [Table(nameof(Designation), Schema = "CommonEntity")]
     public class Designation
     {
         public Guid Id { get; set; }

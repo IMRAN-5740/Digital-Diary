@@ -1,4 +1,5 @@
 ﻿using Digital.Diary.Models.BaseEntityModel;
+using Digital.Diary.Models.EntityModels.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
