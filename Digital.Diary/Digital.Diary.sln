@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.Models", "Dig
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.AppServer", "Digital.Diary.AppServer\Digital.Diary.AppServer.csproj", "{0F4349BD-56B7-4F38-97E5-CC26275FD028}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital.Diary.Configurations", "Digital.Diary.Configurations\Digital.Diary.Configurations.csproj", "{2BC60123-AAA9-4799-8ECE-9D5801A3800F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{0F4349BD-56B7-4F38-97E5-CC26275FD028}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F4349BD-56B7-4F38-97E5-CC26275FD028}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F4349BD-56B7-4F38-97E5-CC26275FD028}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2BC60123-AAA9-4799-8ECE-9D5801A3800F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC60123-AAA9-4799-8ECE-9D5801A3800F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC60123-AAA9-4799-8ECE-9D5801A3800F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC60123-AAA9-4799-8ECE-9D5801A3800F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

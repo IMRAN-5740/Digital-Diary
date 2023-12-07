@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Digital.Diary.Repositories.Abstractions\Digital.Diary.Repositories.Abstractions.csproj" />
+    <ProjectReference Include="..\Digital.Diary.Services.Abstractions\Digital.Diary.Services.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>

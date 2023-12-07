@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Digital.Diary.Databases\Digital.Diary.Databases.csproj" />
+    <ProjectReference Include="..\Digital.Diary.Repositories.Abstractions\Digital.Diary.Repositories.Abstractions.csproj" />
+    <ProjectReference Include="..\Digital.Diary.Repositories\Digital.Diary.Repositories.csproj" />
+    <ProjectReference Include="..\Digital.Diary.Services.Abstractions\Digital.Diary.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\Digital.Diary.Services\Digital.Diary.Services.csproj" />
+  </ItemGroup>
+
+</Project>

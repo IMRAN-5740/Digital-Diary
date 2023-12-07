@@ -4,6 +4,82 @@
     "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.WebServer\\Digital.Diary.WebServer.csproj": {}
   },
   "projects": {
+    "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Configurations\\Digital.Diary.Configurations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Configurations\\Digital.Diary.Configurations.csproj",
+        "projectName": "Digital.Diary.Configurations",
+        "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Configurations\\Digital.Diary.Configurations.csproj",
+        "packagesPath": "C:\\Users\\imran\\.nuget\\packages\\",
+        "outputPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Configurations\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\imran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Databases\\Digital.Diary.Databases.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Databases\\Digital.Diary.Databases.csproj"
+              },
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj"
+              },
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories\\Digital.Diary.Repositories.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories\\Digital.Diary.Repositories.csproj"
+              },
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services.Abstractions\\Digital.Diary.Services.Abstractions.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services.Abstractions\\Digital.Diary.Services.Abstractions.csproj"
+              },
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services\\Digital.Diary.Services.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services\\Digital.Diary.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Databases\\Digital.Diary.Databases.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -150,6 +226,271 @@
         }
       }
     },
+    "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj",
+        "projectName": "Digital.Diary.Repositories.Abstractions",
+        "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\imran\\.nuget\\packages\\",
+        "outputPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\imran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Models\\Digital.Diary.Models.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Models\\Digital.Diary.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories\\Digital.Diary.Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories\\Digital.Diary.Repositories.csproj",
+        "projectName": "Digital.Diary.Repositories",
+        "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories\\Digital.Diary.Repositories.csproj",
+        "packagesPath": "C:\\Users\\imran\\.nuget\\packages\\",
+        "outputPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\imran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Databases\\Digital.Diary.Databases.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Databases\\Digital.Diary.Databases.csproj"
+              },
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Models\\Digital.Diary.Models.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Models\\Digital.Diary.Models.csproj"
+              },
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services.Abstractions\\Digital.Diary.Services.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services.Abstractions\\Digital.Diary.Services.Abstractions.csproj",
+        "projectName": "Digital.Diary.Services.Abstractions",
+        "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services.Abstractions\\Digital.Diary.Services.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\imran\\.nuget\\packages\\",
+        "outputPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services.Abstractions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\imran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Models\\Digital.Diary.Models.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Models\\Digital.Diary.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services\\Digital.Diary.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services\\Digital.Diary.Services.csproj",
+        "projectName": "Digital.Diary.Services",
+        "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services\\Digital.Diary.Services.csproj",
+        "packagesPath": "C:\\Users\\imran\\.nuget\\packages\\",
+        "outputPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\imran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj"
+              },
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services.Abstractions\\Digital.Diary.Services.Abstractions.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Services.Abstractions\\Digital.Diary.Services.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.WebServer\\Digital.Diary.WebServer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -179,8 +520,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Configurations\\Digital.Diary.Configurations.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Configurations\\Digital.Diary.Configurations.csproj"
+              },
               "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Databases\\Digital.Diary.Databases.csproj": {
                 "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Databases\\Digital.Diary.Databases.csproj"
+              },
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj"
+              },
+              "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories\\Digital.Diary.Repositories.csproj": {
+                "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories\\Digital.Diary.Repositories.csproj"
               }
             }
           }
