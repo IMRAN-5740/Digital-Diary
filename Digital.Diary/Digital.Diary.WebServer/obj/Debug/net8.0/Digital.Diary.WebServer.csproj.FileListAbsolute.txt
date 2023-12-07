@@ -139,3 +139,13 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\refint\D
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.pdb
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.genruntimeconfig.cache
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\ref\Digital.Diary.WebServer.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Configurations.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Repositories.Abstractions.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Repositories.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Services.Abstractions.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Services.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Configurations.pdb
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Repositories.Abstractions.pdb
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Repositories.pdb
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Services.pdb
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Services.Abstractions.pdb

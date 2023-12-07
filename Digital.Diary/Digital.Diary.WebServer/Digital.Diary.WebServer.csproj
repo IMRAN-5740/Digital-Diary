@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -21,7 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Digital.Diary.Configurations\Digital.Diary.Configurations.csproj" />
     <ProjectReference Include="..\Digital.Diary.Databases\Digital.Diary.Databases.csproj" />
+    <ProjectReference Include="..\Digital.Diary.Repositories.Abstractions\Digital.Diary.Repositories.Abstractions.csproj" />
+    <ProjectReference Include="..\Digital.Diary.Repositories\Digital.Diary.Repositories.csproj" />
   </ItemGroup>
 
 </Project>

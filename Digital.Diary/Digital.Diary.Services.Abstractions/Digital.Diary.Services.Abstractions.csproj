@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Digital.Diary.Models\Digital.Diary.Models.csproj" />
+  </ItemGroup>
+
 </Project>

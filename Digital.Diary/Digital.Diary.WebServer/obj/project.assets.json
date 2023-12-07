@@ -1565,6 +1565,23 @@
           }
         }
       },
+      "Digital.Diary.Configurations/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Digital.Diary.Databases": "1.0.0",
+          "Digital.Diary.Repositories": "1.0.0",
+          "Digital.Diary.Repositories.Abstractions": "1.0.0",
+          "Digital.Diary.Services": "1.0.0",
+          "Digital.Diary.Services.Abstractions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Digital.Diary.Configurations.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Digital.Diary.Configurations.dll": {}
+        }
+      },
       "Digital.Diary.Databases/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -1588,6 +1605,61 @@
         },
         "runtime": {
           "bin/placeholder/Digital.Diary.Models.dll": {}
+        }
+      },
+      "Digital.Diary.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Digital.Diary.Databases": "1.0.0",
+          "Digital.Diary.Models": "1.0.0",
+          "Digital.Diary.Repositories.Abstractions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Digital.Diary.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Digital.Diary.Repositories.dll": {}
+        }
+      },
+      "Digital.Diary.Repositories.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Digital.Diary.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Digital.Diary.Repositories.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Digital.Diary.Repositories.Abstractions.dll": {}
+        }
+      },
+      "Digital.Diary.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Digital.Diary.Repositories.Abstractions": "1.0.0",
+          "Digital.Diary.Services.Abstractions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Digital.Diary.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Digital.Diary.Services.dll": {}
+        }
+      },
+      "Digital.Diary.Services.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Digital.Diary.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Digital.Diary.Services.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Digital.Diary.Services.Abstractions.dll": {}
         }
       }
     }
@@ -4448,6 +4520,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Digital.Diary.Configurations/1.0.0": {
+      "type": "project",
+      "path": "../Digital.Diary.Configurations/Digital.Diary.Configurations.csproj",
+      "msbuildProject": "../Digital.Diary.Configurations/Digital.Diary.Configurations.csproj"
+    },
     "Digital.Diary.Databases/1.0.0": {
       "type": "project",
       "path": "../Digital.Diary.Databases/Digital.Diary.Databases.csproj",
@@ -4457,11 +4534,34 @@
       "type": "project",
       "path": "../Digital.Diary.Models/Digital.Diary.Models.csproj",
       "msbuildProject": "../Digital.Diary.Models/Digital.Diary.Models.csproj"
+    },
+    "Digital.Diary.Repositories/1.0.0": {
+      "type": "project",
+      "path": "../Digital.Diary.Repositories/Digital.Diary.Repositories.csproj",
+      "msbuildProject": "../Digital.Diary.Repositories/Digital.Diary.Repositories.csproj"
+    },
+    "Digital.Diary.Repositories.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../Digital.Diary.Repositories.Abstractions/Digital.Diary.Repositories.Abstractions.csproj",
+      "msbuildProject": "../Digital.Diary.Repositories.Abstractions/Digital.Diary.Repositories.Abstractions.csproj"
+    },
+    "Digital.Diary.Services/1.0.0": {
+      "type": "project",
+      "path": "../Digital.Diary.Services/Digital.Diary.Services.csproj",
+      "msbuildProject": "../Digital.Diary.Services/Digital.Diary.Services.csproj"
+    },
+    "Digital.Diary.Services.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../Digital.Diary.Services.Abstractions/Digital.Diary.Services.Abstractions.csproj",
+      "msbuildProject": "../Digital.Diary.Services.Abstractions/Digital.Diary.Services.Abstractions.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Digital.Diary.Configurations >= 1.0.0",
       "Digital.Diary.Databases >= 1.0.0",
+      "Digital.Diary.Repositories >= 1.0.0",
+      "Digital.Diary.Repositories.Abstractions >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
@@ -4501,8 +4601,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Configurations\\Digital.Diary.Configurations.csproj": {
+              "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Configurations\\Digital.Diary.Configurations.csproj"
+            },
             "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Databases\\Digital.Diary.Databases.csproj": {
               "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Databases\\Digital.Diary.Databases.csproj"
+            },
+            "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj": {
+              "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories.Abstractions\\Digital.Diary.Repositories.Abstractions.csproj"
+            },
+            "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories\\Digital.Diary.Repositories.csproj": {
+              "projectPath": "E:\\Digital Diary\\Digital.Diary\\Digital.Diary.Repositories\\Digital.Diary.Repositories.csproj"
             }
           }
         }

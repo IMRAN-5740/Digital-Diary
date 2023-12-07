@@ -5,7 +5,7 @@ namespace Digital.Diary.Models.EntityModels.Common
     [Table(nameof(Designation), Schema = "CommonEntity")]
     public class Designation
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = default!;
         public string DesignationName { get; set; } = default!;
     }
 }

@@ -10,3 +10,7 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories.Abstractions\obj\Debug
 E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories.Abstractions\obj\Debug\net8.0\refint\Digital.Diary.Repositories.Abstractions.dll
 E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories.Abstractions\obj\Debug\net8.0\Digital.Diary.Repositories.Abstractions.pdb
 E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories.Abstractions\obj\Debug\net8.0\ref\Digital.Diary.Repositories.Abstractions.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories.Abstractions\bin\Debug\net8.0\Digital.Diary.Models.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories.Abstractions\bin\Debug\net8.0\Digital.Diary.Models.pdb
+E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories.Abstractions\obj\Debug\net8.0\Digital.Diary.Repositories.Abstractions.csproj.AssemblyReference.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.Repositories.Abstractions\obj\Debug\net8.0\Digital.Diary.Repositories.Abstractions.csproj.CopyComplete
