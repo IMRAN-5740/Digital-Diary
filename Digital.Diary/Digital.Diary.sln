@@ -7,21 +7,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeServerLibraries", "WeServ
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppServerLibraries", "AppServerLibraries", "{08D02D3D-0178-44BD-862E-1BE072D135F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital.Diary.WebServer", "Digital.Diary.WebServer\Digital.Diary.WebServer.csproj", "{976BEB68-BDFE-4D1F-8537-3F1EFF934278}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.WebServer", "Digital.Diary.WebServer\Digital.Diary.WebServer.csproj", "{976BEB68-BDFE-4D1F-8537-3F1EFF934278}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital.Diary.AppServer", "Digital.Diary.AppServer\Digital.Diary.AppServer.csproj", "{59903E54-275B-4D82-88EA-4AEEBAB21A83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.Databases", "Digital.Diary.Databases\Digital.Diary.Databases.csproj", "{DBF0DAF4-00F7-4B72-876F-3FE484C6EC0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital.Diary.Databases", "Digital.Diary.Databases\Digital.Diary.Databases.csproj", "{DBF0DAF4-00F7-4B72-876F-3FE484C6EC0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.Services", "Digital.Diary.Services\Digital.Diary.Services.csproj", "{930FB84A-B8CA-4C4C-9C62-DA6126716BF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital.Diary.Services", "Digital.Diary.Services\Digital.Diary.Services.csproj", "{930FB84A-B8CA-4C4C-9C62-DA6126716BF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.Services.Abstractions", "Digital.Diary.Services.Abstractions\Digital.Diary.Services.Abstractions.csproj", "{84AA2998-0204-449E-8649-CF1A77CB58F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital.Diary.Services.Abstractions", "Digital.Diary.Services.Abstractions\Digital.Diary.Services.Abstractions.csproj", "{84AA2998-0204-449E-8649-CF1A77CB58F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.Repositories", "Digital.Diary.Repositories\Digital.Diary.Repositories.csproj", "{BCD0ED1E-5794-479D-9C47-7AD8ADF003EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital.Diary.Repositories", "Digital.Diary.Repositories\Digital.Diary.Repositories.csproj", "{BCD0ED1E-5794-479D-9C47-7AD8ADF003EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.Repositories.Abstractions", "Digital.Diary.Repositories.Abstractions\Digital.Diary.Repositories.Abstractions.csproj", "{2F1B44FC-C5BE-4948-8A88-C052B2EEFE37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital.Diary.Repositories.Abstractions", "Digital.Diary.Repositories.Abstractions\Digital.Diary.Repositories.Abstractions.csproj", "{2F1B44FC-C5BE-4948-8A88-C052B2EEFE37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.Models", "Digital.Diary.Models\Digital.Diary.Models.csproj", "{0A52BAFB-19D6-4915-BF37-60FFD73821AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital.Diary.Models", "Digital.Diary.Models\Digital.Diary.Models.csproj", "{0A52BAFB-19D6-4915-BF37-60FFD73821AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital.Diary.AppServer", "Digital.Diary.AppServer\Digital.Diary.AppServer.csproj", "{0F4349BD-56B7-4F38-97E5-CC26275FD028}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,12 +33,6 @@ Global
 		{976BEB68-BDFE-4D1F-8537-3F1EFF934278}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{976BEB68-BDFE-4D1F-8537-3F1EFF934278}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{976BEB68-BDFE-4D1F-8537-3F1EFF934278}.Release|Any CPU.Build.0 = Release|Any CPU
-		{59903E54-275B-4D82-88EA-4AEEBAB21A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{59903E54-275B-4D82-88EA-4AEEBAB21A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59903E54-275B-4D82-88EA-4AEEBAB21A83}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{59903E54-275B-4D82-88EA-4AEEBAB21A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{59903E54-275B-4D82-88EA-4AEEBAB21A83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{59903E54-275B-4D82-88EA-4AEEBAB21A83}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{DBF0DAF4-00F7-4B72-876F-3FE484C6EC0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DBF0DAF4-00F7-4B72-876F-3FE484C6EC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBF0DAF4-00F7-4B72-876F-3FE484C6EC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +57,12 @@ Global
 		{0A52BAFB-19D6-4915-BF37-60FFD73821AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A52BAFB-19D6-4915-BF37-60FFD73821AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A52BAFB-19D6-4915-BF37-60FFD73821AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F4349BD-56B7-4F38-97E5-CC26275FD028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F4349BD-56B7-4F38-97E5-CC26275FD028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F4349BD-56B7-4F38-97E5-CC26275FD028}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0F4349BD-56B7-4F38-97E5-CC26275FD028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F4349BD-56B7-4F38-97E5-CC26275FD028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F4349BD-56B7-4F38-97E5-CC26275FD028}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
