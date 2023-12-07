@@ -12,7 +12,9 @@ namespace Digital.Diary.Databases.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
+
         #region Academic
+
         public DbSet<CrTable> CrTables { get; set; }
         public DbSet<Dean> Deans { get; set; }
         public DbSet<Department> Departments { get; set; }
@@ -22,24 +24,24 @@ namespace Digital.Diary.Databases.Data
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Council> Councils { get; set; }
         public DbSet<RegentBoard> RegentBoards { get; set; }
+
         #endregion Academic
+
         #region Administration
+
         public DbSet<Association> Offices { get; set; }
         public DbSet<AssociationEmployee> OfficeEmployees { get; set; }
 
-
         public DbSet<Committee> Committees { get; set; }
         public DbSet<CommitteeEmployee> CommitteeEmployees { get; set; }
-
 
         public DbSet<Association> Associations { get; set; }
         public DbSet<AssociationEmployee> AssociationEmployees { get; set; }
 
         #endregion Administration
 
-
-
         public DbSet<TeacherFaculty> TeachersFaculty { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -53,7 +55,7 @@ namespace Digital.Diary.Databases.Data
                 .HasForeignKey(t => t.DesignationId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-           // Teacher to Faculty(Many - to - One)
+            // Teacher to Faculty(Many - to - One)
             modelBuilder.Entity<Teacher>()
                 .HasOne(t => t.Faculty)
                 .WithMany(f => f.Teachers)
@@ -116,8 +118,6 @@ namespace Digital.Diary.Databases.Data
                .HasForeignKey(c => c.DesignationId)
                .OnDelete(DeleteBehavior.Restrict);
 
-
-
             // OfficeEmployee to Office (Many-to-One)
 
             modelBuilder.Entity<OfficeEmployee>()
@@ -125,7 +125,6 @@ namespace Digital.Diary.Databases.Data
               .WithMany()
               .HasForeignKey(c => c.OfficeId)
               .OnDelete(DeleteBehavior.Restrict);
-
 
             // Office to OfficeEmployee (One-to-Many)
 
@@ -135,16 +134,12 @@ namespace Digital.Diary.Databases.Data
                .HasForeignKey(oe => oe.OfficeId)
                .OnDelete(DeleteBehavior.Cascade);
 
-
             // OfficeEmployee to Designation (Many-to-One)
             modelBuilder.Entity<OfficeEmployee>()
                 .HasOne(s => s.Designation)
                 .WithMany()
                 .HasForeignKey(s => s.DesignationId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-
-
 
             // CommitteeEmployee to Committee (Many-to-One)
 
@@ -153,7 +148,6 @@ namespace Digital.Diary.Databases.Data
               .WithMany()
               .HasForeignKey(c => c.CommitteeId)
               .OnDelete(DeleteBehavior.Restrict);
-
 
             // Committee toCommitteeEmployee (One-to-Many)
 
@@ -170,7 +164,6 @@ namespace Digital.Diary.Databases.Data
                 .HasForeignKey(s => s.DesignationId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-
             // AssociationEmployee to Association (Many-to-One)
 
             modelBuilder.Entity<AssociationEmployee>()
@@ -178,7 +171,6 @@ namespace Digital.Diary.Databases.Data
               .WithMany()
               .HasForeignKey(c => c.AssociationId)
               .OnDelete(DeleteBehavior.Restrict);
-
 
             // Association to AssociationEmployee (One-to-Many)
 
@@ -194,7 +186,6 @@ namespace Digital.Diary.Databases.Data
                 .WithMany()
                 .HasForeignKey(s => s.DesignationId)
                 .OnDelete(DeleteBehavior.Restrict);
-
 
             // Other configurations...
 

@@ -9,6 +9,7 @@ namespace Digital.Diary.Models.EntityModels.Academic
     {
         [DisplayName("Faculty Name")]
         public Guid FacultyId { get; set; } = default!;
+
         public Faculty Faculty { get; set; } = default!;
     }
 }

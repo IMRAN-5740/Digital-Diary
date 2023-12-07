@@ -8,14 +8,14 @@ namespace Digital.Diary.Models.EntityModels.Administration.Offices
     [Table(nameof(OfficeEmployee), Schema = "Administration.Offices")]
     public class OfficeEmployee : BaseUserTable
     {
-
         [DisplayName("Office Name")]
         public Guid OfficeId { get; set; } = default!;
+
         public Office Office { get; set; } = default!;
 
         [DisplayName("Designation Name")]
         public Guid DesignationId { get; set; } = default!;
-        public Designation Designation { get; set; } = default!;
 
+        public Designation Designation { get; set; } = default!;
     }
 }
