@@ -19,6 +19,5 @@ namespace Digital.Diary.Models.EntityModels.Academic
         public ICollection<Staff>? Staffs { get; set; } = new List<Staff>();
 
         public ICollection<CrTable>? CrTables { get; set; } = new List<CrTable>();
-
     }
 }

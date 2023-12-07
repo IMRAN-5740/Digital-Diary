@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeServerLibraries", "WeServerLibraries", "{147A9B5F-3732-4369-9828-7179822EE39F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebServerLibraries", "WebServerLibraries", "{147A9B5F-3732-4369-9828-7179822EE39F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppServerLibraries", "AppServerLibraries", "{08D02D3D-0178-44BD-862E-1BE072D135F0}"
 EndProject
@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.Repositories.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.Models", "Digital.Diary.Models\Digital.Diary.Models.csproj", "{0A52BAFB-19D6-4915-BF37-60FFD73821AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital.Diary.AppServer", "Digital.Diary.AppServer\Digital.Diary.AppServer.csproj", "{0F4349BD-56B7-4F38-97E5-CC26275FD028}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.AppServer", "Digital.Diary.AppServer\Digital.Diary.AppServer.csproj", "{0F4349BD-56B7-4F38-97E5-CC26275FD028}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

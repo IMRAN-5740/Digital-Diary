@@ -7,6 +7,6 @@ namespace Digital.Diary.Models.EntityModels.Administration.Committees
     {
         public Guid Id { get; set; } = default!;
         public string CommitteeName { get; set; } = default!;
-        public ICollection<CommitteeEmployee>? CommitteeEmployees { get; set; } = new List<CommitteeEmployee>(); 
+        public ICollection<CommitteeEmployee>? CommitteeEmployees { get; set; } = new List<CommitteeEmployee>();
     }
 }
