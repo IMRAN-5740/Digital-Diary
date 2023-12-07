@@ -436,6 +436,65 @@ namespace Digital.Diary.Databases.Migrations
                     b.ToTable("OfficeEmployee", "Administration.Offices");
                 });
 
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Transportation.Transport", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("BusName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EndingPoint")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StartingPoint")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Transport", "Administration.Transportation");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Transportation.TransportEmployee", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DesignationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("TransportId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DesignationId");
+
+                    b.HasIndex("TransportId");
+
+                    b.ToTable("TransportEmployee", "Administration.Transportation");
+                });
+
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Common.Designation", b =>
                 {
                     b.Property<Guid>("Id")
@@ -449,6 +508,400 @@ namespace Digital.Diary.Databases.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Designation", "CommonEntity");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.Ambulance", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("AmbulanceName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Ambulance", "EmergencyServices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.AnsarForce", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("AnsarStationName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AnsarForce", "EmergencyServices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.Bus", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("BusName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EndingPoint")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StartingPoint")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Bus", "EmergencyServices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.Courier", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CourierName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Courier", "EmergencyServices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.District", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("DistrictName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("District", "EmergencyServices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.FireStation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FireStationName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FireStation", "EmergencyServices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.GuestHouse", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HouseName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GuestHouse", "EmergencyServices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.Journalist", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("JournalName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Journalist", "EmergencyServices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.PoliceStation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DesignationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StationName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DesignationId");
+
+                    b.ToTable("PoliceStation", "EmergencyServices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.PostOffice", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DesignationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DesignationId");
+
+                    b.ToTable("PostOffice", "EmergencyServices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.Train", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("EndingPoint")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StartingPoint")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrainDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrainName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Train", "EmergencyServices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Miscellaneous.Bank", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("BankName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BranchName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WebAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Bank", "Miscellaneous");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Miscellaneous.BankEmployee", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BankId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DesignationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BankId");
+
+                    b.HasIndex("DesignationId");
+
+                    b.ToTable("BankEmployee", "Miscellaneous");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Student_Activities.Clubs.Club", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ClubName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Club", "StudentActivities.Clubs");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Student_Activities.Clubs.ClubEmployee", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ClubId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DesignationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClubId");
+
+                    b.HasIndex("DesignationId");
+
+                    b.ToTable("ClubEmployee", "StudentActivities.Clubs");
                 });
 
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Council", b =>
@@ -628,6 +1081,85 @@ namespace Digital.Diary.Databases.Migrations
                     b.Navigation("Office");
                 });
 
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Transportation.TransportEmployee", b =>
+                {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
+                        .WithMany()
+                        .HasForeignKey("DesignationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Digital.Diary.Models.EntityModels.Administration.Transportation.Transport", "Transport")
+                        .WithMany("TransportEmployees")
+                        .HasForeignKey("TransportId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Designation");
+
+                    b.Navigation("Transport");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.PoliceStation", b =>
+                {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
+                        .WithMany()
+                        .HasForeignKey("DesignationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Designation");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Emergency_Services.PostOffice", b =>
+                {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
+                        .WithMany()
+                        .HasForeignKey("DesignationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Designation");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Miscellaneous.BankEmployee", b =>
+                {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Miscellaneous.Bank", "Bank")
+                        .WithMany("BankEmployees")
+                        .HasForeignKey("BankId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
+                        .WithMany()
+                        .HasForeignKey("DesignationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Bank");
+
+                    b.Navigation("Designation");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Student_Activities.Clubs.ClubEmployee", b =>
+                {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Student_Activities.Clubs.Club", "Club")
+                        .WithMany("ClubEmployees")
+                        .HasForeignKey("ClubId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
+                        .WithMany()
+                        .HasForeignKey("DesignationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Club");
+
+                    b.Navigation("Designation");
+                });
+
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Department", b =>
                 {
                     b.Navigation("CrTables");
@@ -659,6 +1191,21 @@ namespace Digital.Diary.Databases.Migrations
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Offices.Office", b =>
                 {
                     b.Navigation("OfficeEmployees");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Transportation.Transport", b =>
+                {
+                    b.Navigation("TransportEmployees");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Miscellaneous.Bank", b =>
+                {
+                    b.Navigation("BankEmployees");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Student_Activities.Clubs.Club", b =>
+                {
+                    b.Navigation("ClubEmployees");
                 });
 #pragma warning restore 612, 618
         }
