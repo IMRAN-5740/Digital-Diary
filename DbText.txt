@@ -95,6 +95,21 @@ EstablishmentBranch:AUserTable
 
 
 
+Academic Council:
+
+CouncilTable:BaseUserTable
+=> Select Designation
+=> Se
+
+
+
+
+
+
+
+
+
+
 
 
 

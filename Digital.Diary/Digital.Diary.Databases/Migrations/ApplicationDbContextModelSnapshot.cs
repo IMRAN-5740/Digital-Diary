@@ -22,6 +22,37 @@ namespace Digital.Diary.Databases.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Council", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DesignationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DesignationId");
+
+                    b.ToTable("Council", "Academic");
+                });
+
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.CrTable", b =>
                 {
                     b.Property<Guid>("Id")
@@ -108,21 +139,6 @@ namespace Digital.Diary.Databases.Migrations
                     b.ToTable("Department", "Academic");
                 });
 
-            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Designation", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("DesignationName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Designation", "Academic");
-                });
-
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Faculty", b =>
                 {
                     b.Property<Guid>("Id")
@@ -136,6 +152,37 @@ namespace Digital.Diary.Databases.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Faculty", "Academic");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.RegentBoard", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DesignationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DesignationId");
+
+                    b.ToTable("RegentBoard", "Academic");
                 });
 
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Staff", b =>
@@ -233,7 +280,186 @@ namespace Digital.Diary.Databases.Migrations
 
                     b.HasIndex("TeacherId");
 
-                    b.ToTable("TeachersFaculty");
+                    b.ToTable("TeacherFaculty", "Academic");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Associations.Association", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("AssociationName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Association", "Administration.Associations");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Associations.AssociationEmployee", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AssociationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DesignationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssociationId");
+
+                    b.HasIndex("DesignationId");
+
+                    b.ToTable("AssociationEmployee", "Administration.Associations");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Committees.Committee", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CommitteeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Committee", "Administration.Committees");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Committees.CommitteeEmployee", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CommitteeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DesignationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CommitteeId");
+
+                    b.HasIndex("DesignationId");
+
+                    b.ToTable("CommitteeEmployee", "Administration.Committees");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Offices.Office", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("OfficeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Office", "Administration.Offices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Offices.OfficeEmployee", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DesignationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("OfficeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("PhoneNum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DesignationId");
+
+                    b.HasIndex("OfficeId");
+
+                    b.ToTable("OfficeEmployee", "Administration.Offices");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Common.Designation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("DesignationName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Designation", "CommonEntity");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Council", b =>
+                {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
+                        .WithMany()
+                        .HasForeignKey("DesignationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Designation");
                 });
 
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.CrTable", b =>
@@ -269,6 +495,17 @@ namespace Digital.Diary.Databases.Migrations
                     b.Navigation("Faculty");
                 });
 
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.RegentBoard", b =>
+                {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
+                        .WithMany()
+                        .HasForeignKey("DesignationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Designation");
+                });
+
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Staff", b =>
                 {
                     b.HasOne("Digital.Diary.Models.EntityModels.Academic.Department", "Department")
@@ -277,7 +514,7 @@ namespace Digital.Diary.Databases.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Digital.Diary.Models.EntityModels.Academic.Designation", "Designation")
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
                         .WithMany()
                         .HasForeignKey("DesignationId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -296,7 +533,7 @@ namespace Digital.Diary.Databases.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Digital.Diary.Models.EntityModels.Academic.Designation", "Designation")
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
                         .WithMany()
                         .HasForeignKey("DesignationId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -334,6 +571,63 @@ namespace Digital.Diary.Databases.Migrations
                     b.Navigation("Teacher");
                 });
 
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Associations.AssociationEmployee", b =>
+                {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Administration.Associations.Association", "Association")
+                        .WithMany("AssociationEmployees")
+                        .HasForeignKey("AssociationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
+                        .WithMany()
+                        .HasForeignKey("DesignationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Association");
+
+                    b.Navigation("Designation");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Committees.CommitteeEmployee", b =>
+                {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Administration.Committees.Committee", "Committee")
+                        .WithMany("CommitteeEmployees")
+                        .HasForeignKey("CommitteeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
+                        .WithMany()
+                        .HasForeignKey("DesignationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Committee");
+
+                    b.Navigation("Designation");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Offices.OfficeEmployee", b =>
+                {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
+                        .WithMany()
+                        .HasForeignKey("DesignationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Digital.Diary.Models.EntityModels.Administration.Offices.Office", "Office")
+                        .WithMany("OfficeEmployees")
+                        .HasForeignKey("OfficeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Designation");
+
+                    b.Navigation("Office");
+                });
+
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Department", b =>
                 {
                     b.Navigation("CrTables");
@@ -350,6 +644,21 @@ namespace Digital.Diary.Databases.Migrations
                     b.Navigation("Departments");
 
                     b.Navigation("Teachers");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Associations.Association", b =>
+                {
+                    b.Navigation("AssociationEmployees");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Committees.Committee", b =>
+                {
+                    b.Navigation("CommitteeEmployees");
+                });
+
+            modelBuilder.Entity("Digital.Diary.Models.EntityModels.Administration.Offices.Office", b =>
+                {
+                    b.Navigation("OfficeEmployees");
                 });
 #pragma warning restore 612, 618
         }

@@ -9,6 +9,8 @@ using System.ComponentModel;
 
 namespace Digital.Diary.Models.EntityModels.Academic
 {
+    [Table(nameof(TeacherFaculty), Schema = "Academic")]
+
     public class TeacherFaculty
     {
         public Guid Id { get; set; }
