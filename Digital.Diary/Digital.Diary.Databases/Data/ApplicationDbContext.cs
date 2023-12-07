@@ -2,7 +2,11 @@
 using Digital.Diary.Models.EntityModels.Administration.Associations;
 using Digital.Diary.Models.EntityModels.Administration.Committees;
 using Digital.Diary.Models.EntityModels.Administration.Offices;
+using Digital.Diary.Models.EntityModels.Administration.Transportation;
 using Digital.Diary.Models.EntityModels.Common;
+using Digital.Diary.Models.EntityModels.Emergency_Services;
+using Digital.Diary.Models.EntityModels.Miscellaneous;
+using Digital.Diary.Models.EntityModels.Student_Activities.Clubs;
 using Microsoft.EntityFrameworkCore;
 
 namespace Digital.Diary.Databases.Data
@@ -18,7 +22,6 @@ namespace Digital.Diary.Databases.Data
         public DbSet<CrTable> CrTables { get; set; }
         public DbSet<Dean> Deans { get; set; }
         public DbSet<Department> Departments { get; set; }
-        public DbSet<Designation> Designations { get; set; }
         public DbSet<Faculty> Faculties { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Staff> Staffs { get; set; }
@@ -37,8 +40,46 @@ namespace Digital.Diary.Databases.Data
 
         public DbSet<Association> Associations { get; set; }
         public DbSet<AssociationEmployee> AssociationEmployees { get; set; }
+        public DbSet<Transport> Transports { get; set; }
+        public DbSet<TransportEmployee> TransportEmployees { get; set; }
 
         #endregion Administration
+
+        #region CommonEntity
+
+        public DbSet<Designation> Designations { get; set; }
+
+        #endregion CommonEntity
+
+        #region Miscellaneous
+
+        public DbSet<Bank> Banks { get; set; }
+        public DbSet<BankEmployee> BankEmployees { get; set; }
+
+        #endregion Miscellaneous
+
+        #region EmergencyServices
+
+        public DbSet<Ambulance> Ambulances { get; set; }
+        public DbSet<AnsarForce> AnsarForces { get; set; }
+        public DbSet<Bus> Buses { get; set; }
+        public DbSet<Courier> Couriers { get; set; }
+        public DbSet<District> Districts { get; set; }
+        public DbSet<FireStation> FireStations { get; set; }
+        public DbSet<GuestHouse> Houses { get; set; }
+        public DbSet<Journalist> Journalists { get; set; }
+        public DbSet<PoliceStation> PoliceStations { get; set; }
+        public DbSet<PostOffice> PostOffices { get; set; }
+        public DbSet<Train> Trains { get; set; }
+
+        #endregion EmergencyServices
+
+        #region StudentActivities
+
+        public DbSet<Club> Clubs { get; set; }
+        public DbSet<ClubEmployee> ClubEmployees { get; set; }
+
+        #endregion StudentActivities
 
         public DbSet<TeacherFaculty> TeachersFaculty { get; set; }
 
@@ -185,6 +226,89 @@ namespace Digital.Diary.Databases.Data
                 .HasOne(s => s.Designation)
                 .WithMany()
                 .HasForeignKey(s => s.DesignationId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // TransportEmployee to Transport (Many-to-One)
+
+            modelBuilder.Entity<TransportEmployee>()
+              .HasOne(c => c.Transport)
+              .WithMany()
+              .HasForeignKey(c => c.TransportId)
+              .OnDelete(DeleteBehavior.Restrict);
+
+            // Transport to TransportEmployee (One-to-Many)
+
+            modelBuilder.Entity<Transport>()
+               .HasMany(o => o.TransportEmployees)
+               .WithOne(oe => oe.Transport)
+               .HasForeignKey(oe => oe.TransportId)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            // TransportEmployee to Designation (Many-to-One)
+            modelBuilder.Entity<TransportEmployee>()
+                .HasOne(s => s.Designation)
+                .WithMany()
+                .HasForeignKey(s => s.DesignationId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // BankEmployee to Bank (Many-to-One)
+
+            modelBuilder.Entity<BankEmployee>()
+              .HasOne(c => c.Bank)
+              .WithMany()
+              .HasForeignKey(c => c.BankId)
+              .OnDelete(DeleteBehavior.Restrict);
+
+            // Bank to BankEmployee (One-to-Many)
+
+            modelBuilder.Entity<Bank>()
+               .HasMany(o => o.BankEmployees)
+               .WithOne(oe => oe.Bank)
+               .HasForeignKey(oe => oe.BankId)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            // BankEmployee to Designation (Many-to-One)
+            modelBuilder.Entity<BankEmployee>()
+                .HasOne(s => s.Designation)
+                .WithMany()
+                .HasForeignKey(s => s.DesignationId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // ClubEmployee to Club (Many-to-One)
+
+            modelBuilder.Entity<ClubEmployee>()
+              .HasOne(c => c.Club)
+              .WithMany()
+              .HasForeignKey(c => c.ClubId)
+              .OnDelete(DeleteBehavior.Restrict);
+
+            // Club to ClubEmployee (One-to-Many)
+
+            modelBuilder.Entity<Club>()
+               .HasMany(o => o.ClubEmployees)
+               .WithOne(oe => oe.Club)
+               .HasForeignKey(oe => oe.ClubId)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            // ClubEmployee to Designation (Many-to-One)
+            modelBuilder.Entity<ClubEmployee>()
+                .HasOne(s => s.Designation)
+                .WithMany()
+                .HasForeignKey(s => s.DesignationId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Police Station to Designation (Many-to-One)
+            modelBuilder.Entity<PoliceStation>()
+                .HasOne(t => t.Designation)
+                .WithMany()
+                .HasForeignKey(t => t.DesignationId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Post Office to Designation (Many-to-One)
+            modelBuilder.Entity<PostOffice>()
+                .HasOne(t => t.Designation)
+                .WithMany()
+                .HasForeignKey(t => t.DesignationId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             // Other configurations...
