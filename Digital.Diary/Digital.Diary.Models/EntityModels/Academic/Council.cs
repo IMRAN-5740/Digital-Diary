@@ -10,6 +10,7 @@ namespace Digital.Diary.Models.EntityModels.Academic
     {
         [DisplayName("Designation Name")]
         public Guid DesignationId { get; set; } = default!;
+
         public Designation Designation { get; set; } = default!;
     }
 }

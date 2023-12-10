@@ -6,7 +6,7 @@ namespace Digital.Diary.Models.EntityModels.Academic
     [Table(nameof(Faculty), Schema = "Academic")]
     public class Faculty
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = default!;
 
         [DisplayName("Faculty Name")]
         public string FacultyName { get; set; } = default!;
