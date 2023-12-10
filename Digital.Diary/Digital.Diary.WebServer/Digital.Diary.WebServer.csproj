@@ -27,4 +27,11 @@
     <ProjectReference Include="..\Digital.Diary.Repositories\Digital.Diary.Repositories.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\Administration\" />
+    <Folder Include="Controllers\Emergency Services\" />
+    <Folder Include="Controllers\Miscellaneous\" />
+    <Folder Include="Controllers\Student Activities\" />
+  </ItemGroup>
+
 </Project>

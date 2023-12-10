@@ -1,7 +1,6 @@
 ﻿using Digital.Diary.Models.EntityModels.Common;
 using Digital.Diary.Models.ViewModels.Common;
 using Digital.Diary.Services.Abstractions;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Common
@@ -10,21 +9,22 @@ namespace Digital.Diary.WebServer.Controllers.Common
     [ApiController]
     public class DesignationController : ControllerBase
     {
-        IDesignationService _service;
+        private IDesignationService _service;
+
         public DesignationController(IDesignationService service)
         {
             _service = service;
         }
+
         [HttpGet]
         [Route("GetAll")]
-        public   IActionResult GetAll()
+        public IActionResult GetAll()
         {
             var entities = _service.GetAll();
-           
+
             if (!entities.Any())
             {
-                return BadRequest("No Designation Found");
-
+                return BadRequest("No entity Found");
             }
             var entityListVMs = new List<DesignationVm>();
 
@@ -42,13 +42,12 @@ namespace Digital.Diary.WebServer.Controllers.Common
 
         [HttpPost]
         [Route("Create")]
-
-        public IActionResult Create([FromBody]  DesignationVm createModel)
+        public IActionResult Create([FromBody] DesignationVm createModel)
         {
             if (ModelState.IsValid)
             {
                 Designation finalEntity = createModel.ToModel();
-                finalEntity.Id= Guid.NewGuid();
+                finalEntity.Id = Guid.NewGuid();
                 var result = _service.Create(finalEntity);
                 if (result.IsSucced)
                 {
@@ -67,10 +66,8 @@ namespace Digital.Diary.WebServer.Controllers.Common
             return Ok(createModel);
         }
 
-
         [HttpPut]
         [Route("{id:Guid}")]
-
         public IActionResult Update([FromRoute] Guid id, DesignationVm editModel)
         {
             Designation finalEntity = editModel.ToModel();
@@ -110,15 +107,11 @@ namespace Digital.Diary.WebServer.Controllers.Common
             {
                 Id = existingEntity.Id,
                 DesignationName = existingEntity.DesignationName
-
             };
 
             return Ok(entity);
-
         }
 
-
-    
         [HttpDelete]
         [Route("Delete/{id:Guid}")]
         public IActionResult Delete([FromRoute] Guid id, DesignationVm deleteModel)
@@ -135,7 +128,7 @@ namespace Digital.Diary.WebServer.Controllers.Common
             if (result.IsSucced)
             {
                 ModelState.Clear();
-               return Ok(result);
+                return Ok(result);
             }
             if (result.ErrorMessages.Any())
             {
@@ -146,6 +139,5 @@ namespace Digital.Diary.WebServer.Controllers.Common
             }
             return Ok();
         }
-
     }
 }
