@@ -16,6 +16,21 @@ namespace Digital.Diary.Configurations
 
             services.AddTransient<IFacultyRepository, FacultyRepository>();
             services.AddTransient<IFacultyService, FacultyService>();
+
+            services.AddTransient<IDeanRepository, DeanRepository>();
+            services.AddTransient<IDeanService, DeanService>();
+
+            services.AddTransient<IDepartmentRepository, DepartmentRepository>();
+            services.AddTransient<IDepartmentService, DepartmentService>();
+
+            services.AddTransient<ICouncilRepository, CouncilRepository>();
+            services.AddTransient<ICouncilService, CouncilService>();
+
+            services.AddTransient<IRegentBoardRepository, RegentBoardRepository>();
+            services.AddTransient<IRegentBoardService, RegentBoardService>();
+
+            services.AddTransient<ITeacherRepository, TeacherRepository>();
+            services.AddTransient<ITeacherService, TeacherService>();
         }
     }
 }

@@ -23,7 +23,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.Models", "Dig
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.AppServer", "Digital.Diary.AppServer\Digital.Diary.AppServer.csproj", "{0F4349BD-56B7-4F38-97E5-CC26275FD028}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital.Diary.Configurations", "Digital.Diary.Configurations\Digital.Diary.Configurations.csproj", "{2BC60123-AAA9-4799-8ECE-9D5801A3800F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digital.Diary.Configurations", "Digital.Diary.Configurations\Digital.Diary.Configurations.csproj", "{2BC60123-AAA9-4799-8ECE-9D5801A3800F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B59F78FD-5C21-48F8-9801-32B047C80ABE}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

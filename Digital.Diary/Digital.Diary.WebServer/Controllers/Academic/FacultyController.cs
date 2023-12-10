@@ -9,11 +9,13 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     [ApiController]
     public class FacultyController : ControllerBase
     {
-        IFacultyService _service;
+        private IFacultyService _service;
+
         public FacultyController(IFacultyService service)
         {
             _service = service;
         }
+
         [HttpGet]
         [Route("GetAll")]
         public IActionResult GetAll()

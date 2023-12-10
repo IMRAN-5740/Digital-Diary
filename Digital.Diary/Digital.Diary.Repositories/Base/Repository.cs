@@ -22,30 +22,30 @@ namespace Digital.Diary.Repositories.Base
             }
         }
 
-        public bool Create(T entity)
+        public virtual bool Create(T entity)
         {
             Table.Add(entity);
             return _dbContext.SaveChanges() > 0;
         }
 
-        public bool Update(T entity)
+        public virtual bool Update(T entity)
         {
             Table.Update(entity);
             return _dbContext.SaveChanges() > 0;
         }
 
-        public bool Remove(T entity)
+        public virtual bool Remove(T entity)
         {
             Table.Remove(entity);
             return _dbContext.SaveChanges() > 0;
         }
 
-        public T GetFirstOrDefault(Expression<Func<T, bool>> predicate)
+        public virtual T GetFirstOrDefault(Expression<Func<T, bool>> predicate)
         {
             return Table.FirstOrDefault(predicate);
         }
 
-        public ICollection<T> GetAll(Expression<Func<T, bool>>? predicate = null)
+        public virtual ICollection<T> GetAll(Expression<Func<T, bool>>? predicate = null)
         {
             if (predicate == null)
             {

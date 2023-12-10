@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Digital.Diary.WebServer.props" />
-</Project>
