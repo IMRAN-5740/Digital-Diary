@@ -12,7 +12,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         private readonly ICouncilService _service;
         private readonly IDesignationService _dService;
 
-        public CouncilController(ICouncilService service,IDesignationService dService)
+        public CouncilController(ICouncilService service, IDesignationService dService)
         {
             _service = service;
             _dService = dService;
@@ -41,7 +41,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     PhoneNum = entity.PhoneNum,
                     ProfileImage = entity.ProfileImage,
                     DesignationId = entity.DesignationId,
-                    DesignationName=dName,
+                    DesignationName = dName,
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -124,8 +124,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                 PhoneNum = existingEntity.PhoneNum,
                 ProfileImage = existingEntity.ProfileImage,
                 DesignationId = existingEntity.DesignationId,
-                DesignationName=dName
-
+                DesignationName = dName
             };
             return Ok(entity);
         }

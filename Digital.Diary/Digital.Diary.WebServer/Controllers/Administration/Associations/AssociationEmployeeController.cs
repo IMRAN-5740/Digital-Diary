@@ -1,10 +1,7 @@
-﻿using Digital.Diary.Models.EntityModels.Academic;
-using Digital.Diary.Models.EntityModels.Administration.Associations;
-using Digital.Diary.Models.ViewModels.Academic;
+﻿using Digital.Diary.Models.EntityModels.Administration.Associations;
 using Digital.Diary.Models.ViewModels.Administration.Associations;
 using Digital.Diary.Services.Abstractions.Academic;
 using Digital.Diary.Services.Abstractions.Administration.Associations;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Administration.Associations
@@ -14,11 +11,11 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Associations
     public class AssociationEmployeeController : ControllerBase
     {
         private readonly IAssociationEmployeeService _service;
-        private readonly IDesignationService _dService; 
+        private readonly IDesignationService _dService;
         private readonly IAssociationService _aService;
 
         public AssociationEmployeeController(
-            IAssociationEmployeeService service, 
+            IAssociationEmployeeService service,
             IDesignationService dService,
             IAssociationService aService)
         {
@@ -43,19 +40,17 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Associations
                 var dName = _dService.GetFirstOrDefault(x => x.Id == entity.DesignationId).DesignationName;
                 var aName = _aService.GetFirstOrDefault(x => x.Id == entity.AssociationId).AssociationName;
 
-
                 var entityVm = new AssociationEmployeeVm()
                 {
                     Id = entity.Id,
                     Name = entity.Name,
                     Email = entity.Email,
                     PhoneNum = entity.PhoneNum,
-                    ProfileImage=entity.ProfileImage,
+                    ProfileImage = entity.ProfileImage,
                     DesignationId = entity.DesignationId,
                     AssociationId = entity.AssociationId,
                     DesignationName = dName,
-                    AssociationName= aName,
-                   
+                    AssociationName = aName,
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -83,7 +78,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Associations
                         ModelState.AddModelError("", error);
                     }
                     return Ok(result);
-
                 }
             }
 
@@ -101,11 +95,11 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Associations
                 return BadRequest("No entity found");
             }
             existingEntity.Name = finalEntity.Name;
-            existingEntity.Email= finalEntity.Email;
+            existingEntity.Email = finalEntity.Email;
             existingEntity.ProfileImage = finalEntity.ProfileImage;
-            existingEntity.PhoneNum= finalEntity.PhoneNum;
+            existingEntity.PhoneNum = finalEntity.PhoneNum;
             existingEntity.AssociationId = finalEntity.AssociationId;
-            existingEntity.DesignationId= finalEntity.DesignationId;
+            existingEntity.DesignationId = finalEntity.DesignationId;
 
             var result = _service.Update(existingEntity);
             if (result.IsSucced)
@@ -139,14 +133,13 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Associations
             {
                 Id = existingEntity.Id,
                 Name = existingEntity.Name,
-                Email= existingEntity.Email,
-                PhoneNum= existingEntity.PhoneNum,
-                ProfileImage= existingEntity.ProfileImage,
-                DesignationId= existingEntity.DesignationId,
-                AssociationId= existingEntity.AssociationId,
-                AssociationName=aName,
-                DesignationName=dName,
-                
+                Email = existingEntity.Email,
+                PhoneNum = existingEntity.PhoneNum,
+                ProfileImage = existingEntity.ProfileImage,
+                DesignationId = existingEntity.DesignationId,
+                AssociationId = existingEntity.AssociationId,
+                AssociationName = aName,
+                DesignationName = dName,
             };
 
             return Ok(entity);
@@ -181,4 +174,3 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Associations
         }
     }
 }
-

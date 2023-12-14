@@ -12,7 +12,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         private IRegentBoardService _service;
         private IDesignationService _dService;
 
-        public RegentBoardController(IRegentBoardService service,IDesignationService dService)
+        public RegentBoardController(IRegentBoardService service, IDesignationService dService)
         {
             _service = service;
             _dService = dService;
@@ -41,7 +41,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     PhoneNum = entity.PhoneNum,
                     ProfileImage = entity.ProfileImage,
                     DesignationId = entity.DesignationId,
-                    DesignationName=dName,
+                    DesignationName = dName,
                 };
                 entityListVMs.Add(entityVm);
             }

@@ -1,14 +1,8 @@
 ﻿using Digital.Diary.Databases.Data;
-using Digital.Diary.Models.EntityModels.Academic;
 using Digital.Diary.Models.EntityModels.Administration.Associations;
 using Digital.Diary.Repositories.Abstractions.Administration.Associations;
 using Digital.Diary.Repositories.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Digital.Diary.Repositories.Administration.Associations
 {
@@ -18,6 +12,7 @@ namespace Digital.Diary.Repositories.Administration.Associations
         {
             _dbContext = dbContext;
         }
+
         public override AssociationEmployee GetFirstOrDefault(Expression<Func<AssociationEmployee, bool>> predicate)
         {
             return _dbContext.Set<AssociationEmployee>().FirstOrDefault(predicate);

@@ -1,12 +1,4 @@
-﻿using Digital.Diary.Models.EntityModels.Administration.Offices;
-using Digital.Diary.Models.EntityModels.Administration.Transportation;
-using Digital.Diary.Models.EntityModels.Common;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Digital.Diary.Models.EntityModels.Administration.Transportation;
 
 namespace Digital.Diary.Models.ViewModels.Administration.Transportations
 {
@@ -18,7 +10,7 @@ namespace Digital.Diary.Models.ViewModels.Administration.Transportations
         public string PhoneNum { get; set; } = default!;
         public string? ProfileImage { get; set; }
         public Guid TransportId { get; set; }
-        public string? TransportName { get; set; }
+        public string? BusName { get; set; }
         public Guid DesignationId { get; set; }
         public string? DesignationName { get; set; }
 
@@ -30,7 +22,7 @@ namespace Digital.Diary.Models.ViewModels.Administration.Transportations
                 Email = Email,
                 PhoneNum = PhoneNum,
                 ProfileImage = ProfileImage,
-                TransportId= TransportId,
+                TransportId = TransportId,
                 DesignationId = DesignationId,
                 Id = Id ?? Guid.Empty
             };

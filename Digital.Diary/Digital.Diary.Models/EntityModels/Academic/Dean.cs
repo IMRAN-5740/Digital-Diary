@@ -8,7 +8,6 @@ namespace Digital.Diary.Models.EntityModels.Academic
     [Table(nameof(Dean), Schema = "Academic")]
     public class Dean : BaseUserTable
     {
-
         [DisplayName("Designation Name")]
         public Guid DesignationId { get; set; } = default!;
 

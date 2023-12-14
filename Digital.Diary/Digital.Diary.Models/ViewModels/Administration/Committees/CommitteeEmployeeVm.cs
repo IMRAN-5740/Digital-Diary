@@ -1,10 +1,4 @@
-﻿using Digital.Diary.Models.EntityModels.Administration.Associations;
-using Digital.Diary.Models.EntityModels.Administration.Committees;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Digital.Diary.Models.EntityModels.Administration.Committees;
 
 namespace Digital.Diary.Models.ViewModels.Administration.Committees
 {
@@ -29,7 +23,7 @@ namespace Digital.Diary.Models.ViewModels.Administration.Committees
                 PhoneNum = PhoneNum,
                 ProfileImage = ProfileImage,
                 CommitteeId = CommitteeId,
-                DesignationId= DesignationId,
+                DesignationId = DesignationId,
                 Id = Id ?? Guid.Empty
             };
         }

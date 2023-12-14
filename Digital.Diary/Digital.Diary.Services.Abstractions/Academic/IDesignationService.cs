@@ -5,6 +5,5 @@ namespace Digital.Diary.Services.Abstractions.Academic
 {
     public interface IDesignationService : IService<Designation>
     {
-
     }
 }

@@ -1,10 +1,4 @@
-﻿using Digital.Diary.Models.EntityModels.Administration.Committees;
-using Digital.Diary.Models.EntityModels.Administration.Offices;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Digital.Diary.Models.EntityModels.Administration.Offices;
 
 namespace Digital.Diary.Models.ViewModels.Administration.Offices
 {

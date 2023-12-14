@@ -11,7 +11,7 @@ namespace Digital.Diary.Models.ViewModels.Academic
         public string? ProfileImage { get; set; }
 
         public Guid DesignationId { get; set; }
-        public string? DesignationName { get; set; } 
+        public string? DesignationName { get; set; }
         public Guid DepartmentId { get; set; }
         public string? DepartmentName { get; set; }
 

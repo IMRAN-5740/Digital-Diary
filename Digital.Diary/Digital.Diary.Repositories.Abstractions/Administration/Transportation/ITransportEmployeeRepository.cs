@@ -3,7 +3,7 @@ using Digital.Diary.Repositories.Abstractions.Base;
 
 namespace Digital.Diary.Repositories.Abstractions.Administration.Transportations
 {
-    public interface ITransportRepository : IRepository<Transport>
+    public interface ITransportEmployeeRepository : IRepository<TransportEmployee>
     {
     }
 }

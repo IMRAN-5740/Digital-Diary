@@ -10,10 +10,10 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     public class StaffController : ControllerBase
     {
         private IStaffService _service;
-        IDesignationService _dService;
-        IDepartmentService _deptService;
+        private IDesignationService _dService;
+        private IDepartmentService _deptService;
 
-        public StaffController(IStaffService service,IDesignationService dService,IDepartmentService deptService)
+        public StaffController(IStaffService service, IDesignationService dService, IDepartmentService deptService)
         {
             _service = service;
             _dService = dService;
@@ -46,7 +46,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     DesignationId = entity.DesignationId,
                     DepartmentId = entity.DepartmentId,
                     DesignationName = dName,
-                    DepartmentName=deptName,
+                    DepartmentName = deptName,
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -94,7 +94,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
             existingEntity.Email = finalEntity.Email;
             existingEntity.PhoneNum = finalEntity.PhoneNum;
             existingEntity.ProfileImage = finalEntity.ProfileImage;
-            existingEntity.DesignationId=finalEntity.DesignationId;
+            existingEntity.DesignationId = finalEntity.DesignationId;
             existingEntity.DepartmentId = finalEntity.DepartmentId;
             var result = _service.Update(existingEntity);
             if (result.IsSucced)
@@ -120,7 +120,6 @@ namespace Digital.Diary.WebServer.Controllers.Academic
             var deptName = _deptService.GetFirstOrDefault(x => x.Id == existingEntity.DepartmentId).DeptName;
             var dName = _dService.GetFirstOrDefault(x => x.Id == existingEntity.DesignationId).DesignationName;
 
-
             if (existingEntity == null)
             {
                 return BadRequest("No entity found");
@@ -133,9 +132,9 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                 PhoneNum = existingEntity.PhoneNum,
                 ProfileImage = existingEntity.ProfileImage,
                 DesignationId = existingEntity.DesignationId,
-                DepartmentName=deptName,
+                DepartmentName = deptName,
                 DepartmentId = existingEntity.DepartmentId,
-                DesignationName=dName
+                DesignationName = dName
             };
 
             return Ok(entity);

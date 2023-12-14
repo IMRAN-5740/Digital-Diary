@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Digital.Diary.Models.EntityModels.Administration.Committees;
+using Digital.Diary.Repositories.Abstractions.Base;
 
 namespace Digital.Diary.Repositories.Abstractions.Administration.Committees
 {
-    public interface ICommitteeRepository
+    public interface ICommitteeRepository : IRepository<Committee>
     {
     }
 }
