@@ -1,7 +1,12 @@
-﻿using Digital.Diary.Repositories;
-using Digital.Diary.Repositories.Abstractions;
-using Digital.Diary.Services;
-using Digital.Diary.Services.Abstractions;
+﻿using Digital.Diary.Repositories.Abstractions.Academic;
+using Digital.Diary.Repositories.Abstractions.Administration.Associations;
+using Digital.Diary.Repositories.Academic;
+using Digital.Diary.Repositories.Administration.Associations;
+using Digital.Diary.Services.Abstractions.Academic;
+using Digital.Diary.Services.Abstractions.Administration.Associations;
+using Digital.Diary.Services.Academic;
+using Digital.Diary.Services.Administration.Associations;
+using Digital.Diary.Services.Base;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Digital.Diary.Configurations
@@ -11,6 +16,8 @@ namespace Digital.Diary.Configurations
         public static void ConfigurationResolve(IServiceCollection services)
         {
             //dependency resolving mechanisms
+
+            #region Academic
             services.AddTransient<IDesignationRepository, DesignationRepository>();
             services.AddTransient<IDesignationService, DesignationService>();
 
@@ -37,6 +44,19 @@ namespace Digital.Diary.Configurations
 
             services.AddTransient<ICrTableRepository, CrTableRepository>();
             services.AddTransient<ICrTableService, CrTableService>();
+
+            #endregion  Academic
+            #region Administration
+
+            services.AddTransient<IAssociationRepository, AssociationRepository>();
+            services.AddTransient<IAssociationService, AssociationService>();
+
+            services.AddTransient<IAssociationEmployeeRepository, AssociationEmployeeRepository>();
+            services.AddTransient<IAssociationEmployeeService, AssociationEmployeeService>();
+
+            #endregion Administration
+
+            
 
         }
     }

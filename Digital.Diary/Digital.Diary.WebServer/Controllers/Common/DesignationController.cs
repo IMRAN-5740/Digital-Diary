@@ -1,6 +1,6 @@
 ﻿using Digital.Diary.Models.EntityModels.Common;
 using Digital.Diary.Models.ViewModels.Common;
-using Digital.Diary.Services.Abstractions;
+using Digital.Diary.Services.Abstractions.Academic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Common
@@ -9,7 +9,7 @@ namespace Digital.Diary.WebServer.Controllers.Common
     [ApiController]
     public class DesignationController : ControllerBase
     {
-        private IDesignationService _service;
+        private readonly IDesignationService _service;
 
         public DesignationController(IDesignationService service)
         {
@@ -60,6 +60,7 @@ namespace Digital.Diary.WebServer.Controllers.Common
                     {
                         ModelState.AddModelError("", error);
                     }
+                    return Ok(result);
                 }
             }
 

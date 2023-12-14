@@ -7,7 +7,7 @@ namespace Digital.Diary.Services.Base
 {
     public abstract class Service<T> : IService<T> where T : class
     {
-        private IRepository<T> _repository;
+        private readonly IRepository<T> _repository;
 
         public Service(IRepository<T> repository)
         {

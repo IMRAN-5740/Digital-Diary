@@ -1,9 +1,3 @@
-E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.csproj.AssemblyReference.cache
-E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.GeneratedMSBuildEditorConfig.editorconfig
-E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.AssemblyInfoInputs.cache
-E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.AssemblyInfo.cs
-E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.csproj.CoreCompileInputs.cache
-E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.sourcelink.json
 E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\bin\Debug\net8.0\Digital.Diary.Configurations.deps.json
 E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\bin\Debug\net8.0\Digital.Diary.Configurations.dll
 E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\bin\Debug\net8.0\Digital.Diary.Configurations.pdb
@@ -19,6 +13,12 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\bin\Debug\net8.0\Dig
 E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\bin\Debug\net8.0\Digital.Diary.Services.Abstractions.pdb
 E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\bin\Debug\net8.0\Digital.Diary.Services.pdb
 E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\bin\Debug\net8.0\Digital.Diary.Models.pdb
+E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.csproj.AssemblyReference.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.GeneratedMSBuildEditorConfig.editorconfig
+E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.AssemblyInfoInputs.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.AssemblyInfo.cs
+E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.csproj.CoreCompileInputs.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.sourcelink.json
 E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.csproj.CopyComplete
 E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\Digital.Diary.Configurations.dll
 E:\Digital Diary\Digital.Diary\Digital.Diary.Configurations\obj\Debug\net8.0\refint\Digital.Diary.Configurations.dll
