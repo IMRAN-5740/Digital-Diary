@@ -10,10 +10,16 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     public class TeacherController : ControllerBase
     {
         private ITeacherService _service;
+        private IDesignationService _dService;
+        private IDepartmentService _deptService;
+        private IFacultyService _fService;
 
-        public TeacherController(ITeacherService service)
+        public TeacherController(ITeacherService service,IDesignationService dService, IDepartmentService deptService,IFacultyService fService)
         {
             _service = service;
+            _dService = dService;
+            _deptService = deptService;
+            _fService = fService;
         }
 
         [HttpGet]
@@ -29,6 +35,10 @@ namespace Digital.Diary.WebServer.Controllers.Academic
 
             foreach (var entity in entities)
             {
+                var dName = _dService.GetFirstOrDefault(x => x.Id == entity.DesignationId).DesignationName;
+                var deptName = _deptService.GetFirstOrDefault(x => x.Id == entity.DepartmentId).DeptName;
+                var fName = _fService.GetFirstOrDefault(x => x.Id == entity.FacultyId).FacultyName;
+
                 var entityVm = new TeacherVm()
                 {
                     Id = entity.Id,
@@ -39,6 +49,10 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     DesignationId = entity.DesignationId,
                     FacultyId = entity.FacultyId,
                     DepartmentId = entity.DepartmentId,
+                    DesignationName=dName,
+                    DepartmentName=deptName,
+                    FacultyName=fName
+
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -108,6 +122,9 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         public IActionResult Details(Guid id)
         {
             var existingEntity = _service.GetFirstOrDefault(x => x.Id == id);
+            var dName = _dService.GetFirstOrDefault(x => x.Id == existingEntity.DesignationId).DesignationName;
+            var deptName = _deptService.GetFirstOrDefault(x => x.Id == existingEntity.DepartmentId).DeptName;
+            var fName = _fService.GetFirstOrDefault(x => x.Id == existingEntity.FacultyId).FacultyName;
             if (existingEntity == null)
             {
                 return BadRequest("No entity found");
@@ -121,7 +138,10 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                 ProfileImage = existingEntity.ProfileImage,
                 DesignationId = existingEntity.DesignationId,
                 FacultyId = existingEntity.FacultyId,
-                DepartmentId = existingEntity.DepartmentId
+                DepartmentId = existingEntity.DepartmentId,
+                DesignationName=dName,
+                DepartmentName=deptName,
+                FacultyName=fName
             };
             return Ok(entity);
         }

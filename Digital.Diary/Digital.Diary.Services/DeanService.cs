@@ -9,12 +9,10 @@ namespace Digital.Diary.Services
     public class DeanService : Service<Dean>, IDeanService
     {
         private IDeanRepository _repo;
-        private IFacultyRepository _facRepo;
 
-        public DeanService(IDeanRepository repo, IFacultyRepository facRepo) : base(repo)
+        public DeanService(IDeanRepository repo) : base(repo)
         {
             _repo = repo;
-            _facRepo = facRepo;
         }
 
         public override Result Create(Dean entity)

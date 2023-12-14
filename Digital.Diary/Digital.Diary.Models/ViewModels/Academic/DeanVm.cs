@@ -9,6 +9,9 @@ namespace Digital.Diary.Models.ViewModels.Academic
         public string Email { get; set; } = default!;
         public string PhoneNum { get; set; } = default!;
         public string? ProfileImage { get; set; }
+
+        public Guid DeginationId { get; set; } 
+        public string? DesignationName { get; set; } 
         public Guid FacultyId { get; set; }
         public string? FacultyName { get; set; }
 
@@ -20,6 +23,7 @@ namespace Digital.Diary.Models.ViewModels.Academic
                 Email = Email,
                 PhoneNum = PhoneNum,
                 ProfileImage = ProfileImage,
+                DesignationId= DeginationId,
                 FacultyId = FacultyId,
                 Id = Id ?? Guid.Empty
             };

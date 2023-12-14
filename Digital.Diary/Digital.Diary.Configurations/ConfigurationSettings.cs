@@ -31,6 +31,13 @@ namespace Digital.Diary.Configurations
 
             services.AddTransient<ITeacherRepository, TeacherRepository>();
             services.AddTransient<ITeacherService, TeacherService>();
+
+            services.AddTransient<IStaffRepository, StaffRepository>();
+            services.AddTransient<IStaffService, StaffService>();
+
+            services.AddTransient<ICrTableRepository, CrTableRepository>();
+            services.AddTransient<ICrTableService, CrTableService>();
+
         }
     }
 }

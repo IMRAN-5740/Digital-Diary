@@ -10,16 +10,22 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     public class DeanController : ControllerBase
     {
         private IDeanService _service;
+        private IFacultyService _fService;
+        private IDesignationService _dService;
 
-        public DeanController(IDeanService service)
+
+        public DeanController(IDeanService service,IFacultyService fService,IDesignationService dService)
         {
             _service = service;
+            _fService = fService;
+            _dService = dService;
         }
 
         [HttpGet]
         [Route("GetAll")]
         public IActionResult GetAll()
         {
+            
             var entities = _service.GetAll();
             if (!entities.Any())
             {
@@ -29,6 +35,9 @@ namespace Digital.Diary.WebServer.Controllers.Academic
 
             foreach (var entity in entities)
             {
+                var fName = _fService.GetFirstOrDefault(x => x.Id == entity.FacultyId).FacultyName;
+                var dName = _dService.GetFirstOrDefault(x => x.Id == entity.DesignationId).DesignationName;
+
                 var entityVm = new DeanVm()
                 {
                     Id = entity.Id,
@@ -36,7 +45,10 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     Email = entity.Email,
                     PhoneNum = entity.PhoneNum,
                     ProfileImage = entity.ProfileImage,
+                    DeginationId=entity.DesignationId,
+                    DesignationName=dName,
                     FacultyId = entity.FacultyId,
+                    FacultyName = fName
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -83,6 +95,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
             existingEntity.Email = finalEntity.Email;
             existingEntity.PhoneNum = finalEntity.PhoneNum;
             existingEntity.ProfileImage = finalEntity.ProfileImage;
+            existingEntity.DesignationId = finalEntity.DesignationId;
             existingEntity.FacultyId = finalEntity.FacultyId;
             var result = _service.Update(existingEntity);
             if (result.IsSucced)
@@ -105,6 +118,8 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         public IActionResult Details(Guid id)
         {
             var existingEntity = _service.GetFirstOrDefault(x => x.Id == id);
+            var fName = _fService.GetFirstOrDefault(x => x.Id == existingEntity.FacultyId).FacultyName;
+            var dName = _dService.GetFirstOrDefault(x => x.Id == existingEntity.DesignationId).DesignationName;
             if (existingEntity == null)
             {
                 return BadRequest("No entity found");
@@ -116,7 +131,10 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                 Email = existingEntity.Email,
                 PhoneNum = existingEntity.PhoneNum,
                 ProfileImage = existingEntity.ProfileImage,
+                DeginationId= existingEntity.DesignationId,
+                DesignationName=dName,
                 FacultyId = existingEntity.FacultyId,
+                FacultyName= fName,
             };
 
             return Ok(entity);

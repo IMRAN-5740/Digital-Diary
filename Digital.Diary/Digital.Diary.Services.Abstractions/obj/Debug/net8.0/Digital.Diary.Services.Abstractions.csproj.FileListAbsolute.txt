@@ -1,0 +1,16 @@
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\bin\Debug\net8.0\Digital.Diary.Services.Abstractions.deps.json
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\bin\Debug\net8.0\Digital.Diary.Services.Abstractions.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\bin\Debug\net8.0\Digital.Diary.Services.Abstractions.pdb
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\bin\Debug\net8.0\Digital.Diary.Models.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\bin\Debug\net8.0\Digital.Diary.Models.pdb
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\obj\Debug\net8.0\Digital.Diary.Services.Abstractions.csproj.AssemblyReference.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\obj\Debug\net8.0\Digital.Diary.Services.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\obj\Debug\net8.0\Digital.Diary.Services.Abstractions.AssemblyInfoInputs.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\obj\Debug\net8.0\Digital.Diary.Services.Abstractions.AssemblyInfo.cs
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\obj\Debug\net8.0\Digital.Diary.Services.Abstractions.csproj.CoreCompileInputs.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\obj\Debug\net8.0\Digital.Diary.Services.Abstractions.sourcelink.json
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\obj\Debug\net8.0\Digital.Diary.Services.Abstractions.csproj.CopyComplete
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\obj\Debug\net8.0\Digital.Diary.Services.Abstractions.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\obj\Debug\net8.0\refint\Digital.Diary.Services.Abstractions.dll
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\obj\Debug\net8.0\Digital.Diary.Services.Abstractions.pdb
+E:\Digital Diary\Digital.Diary\Digital.Diary.Services.Abstractions\obj\Debug\net8.0\ref\Digital.Diary.Services.Abstractions.dll
