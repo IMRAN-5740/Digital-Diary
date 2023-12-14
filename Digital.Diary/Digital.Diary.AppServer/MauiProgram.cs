@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-
-namespace Digital.Diary.AppServer
+﻿namespace Digital.Diary.AppServer
 {
     public static class MauiProgram
     {
@@ -16,7 +14,7 @@ namespace Digital.Diary.AppServer
                 });
 
 #if DEBUG
-            builder.Logging.AddDebug();
+    		builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

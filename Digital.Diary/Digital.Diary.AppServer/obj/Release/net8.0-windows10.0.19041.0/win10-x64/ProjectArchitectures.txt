@@ -1,0 +1,1 @@
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\Digital.Diary.AppServer.csproj;x64
