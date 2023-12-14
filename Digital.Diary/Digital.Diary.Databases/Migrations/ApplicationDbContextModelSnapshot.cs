@@ -94,6 +94,9 @@ namespace Digital.Diary.Databases.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("DesignationId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -113,6 +116,8 @@ namespace Digital.Diary.Databases.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("DesignationId");
 
                     b.HasIndex("FacultyId");
 
@@ -928,11 +933,19 @@ namespace Digital.Diary.Databases.Migrations
 
             modelBuilder.Entity("Digital.Diary.Models.EntityModels.Academic.Dean", b =>
                 {
+                    b.HasOne("Digital.Diary.Models.EntityModels.Common.Designation", "Designation")
+                        .WithMany()
+                        .HasForeignKey("DesignationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("Digital.Diary.Models.EntityModels.Academic.Faculty", "Faculty")
                         .WithMany("Deans")
                         .HasForeignKey("FacultyId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("Designation");
 
                     b.Navigation("Faculty");
                 });

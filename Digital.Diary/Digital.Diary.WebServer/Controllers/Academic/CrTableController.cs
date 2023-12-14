@@ -10,10 +10,12 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     public class CrTableController : ControllerBase
     {
         private ICrTableService _service;
+        IDepartmentService _deptService;
 
-        public CrTableController(ICrTableService service)
+        public CrTableController(ICrTableService service,IDepartmentService deptService)
         {
             _service = service;
+            _deptService = deptService;
         }
 
         [HttpGet]
@@ -29,6 +31,8 @@ namespace Digital.Diary.WebServer.Controllers.Academic
 
             foreach (var entity in entities)
             {
+                var deptName = _deptService.GetFirstOrDefault(x => x.Id == entity.DepartmentId).DeptName;
+
                 var entityVm = new CrTableVm()
                 {
                     Id = entity.Id,
@@ -37,6 +41,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     PhoneNum = entity.PhoneNum,
                     ProfileImage = entity.ProfileImage,
                     DepartmentId = entity.DepartmentId,
+                    DepartmentName=deptName
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -105,6 +110,8 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         public IActionResult Details(Guid id)
         {
             var existingEntity = _service.GetFirstOrDefault(x => x.Id == id);
+            var deptName = _deptService.GetFirstOrDefault(x => x.Id == existingEntity.DepartmentId).DeptName;
+
             if (existingEntity == null)
             {
                 return BadRequest("No entity found");
@@ -117,6 +124,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                 PhoneNum = existingEntity.PhoneNum,
                 ProfileImage = existingEntity.ProfileImage,
                 DepartmentId = existingEntity.DepartmentId,
+                DepartmentName=deptName
             };
 
             return Ok(entity);

@@ -10,10 +10,12 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     public class RegentBoardController : ControllerBase
     {
         private IRegentBoardService _service;
+        private IDesignationService _dService;
 
-        public RegentBoardController(IRegentBoardService service)
+        public RegentBoardController(IRegentBoardService service,IDesignationService dService)
         {
             _service = service;
+            _dService = dService;
         }
 
         [HttpGet]
@@ -29,6 +31,8 @@ namespace Digital.Diary.WebServer.Controllers.Academic
 
             foreach (var entity in entities)
             {
+                var dName = _dService.GetFirstOrDefault(x => x.Id == entity.DesignationId).DesignationName;
+
                 var entityVm = new RegentBoardVm()
                 {
                     Id = entity.Id,
@@ -37,6 +41,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     PhoneNum = entity.PhoneNum,
                     ProfileImage = entity.ProfileImage,
                     DesignationId = entity.DesignationId,
+                    DesignationName=dName,
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -104,6 +109,8 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         public IActionResult Details(Guid id)
         {
             var existingEntity = _service.GetFirstOrDefault(x => x.Id == id);
+            var dName = _dService.GetFirstOrDefault(x => x.Id == existingEntity.DesignationId).DesignationName;
+
             if (existingEntity == null)
             {
                 return BadRequest("No entity found");
@@ -116,6 +123,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                 PhoneNum = existingEntity.PhoneNum,
                 ProfileImage = existingEntity.ProfileImage,
                 DesignationId = existingEntity.DesignationId,
+                DesignationName = dName,
             };
             return Ok(entity);
         }

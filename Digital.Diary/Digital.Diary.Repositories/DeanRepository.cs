@@ -29,6 +29,7 @@ namespace Digital.Diary.Repositories
                              Email = d.Email,
                              PhoneNum = d.PhoneNum,
                              ProfileImage = d.ProfileImage,
+                             DesignationId = d.DesignationId,
                              FacultyId = d.FacultyId,
                          };
             return result.ToList();

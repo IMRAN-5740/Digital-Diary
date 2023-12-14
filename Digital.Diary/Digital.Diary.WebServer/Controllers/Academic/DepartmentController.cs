@@ -10,10 +10,12 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     public class DepartmentController : ControllerBase
     {
         private IDepartmentService _service;
+        private IFacultyService _fService;
 
-        public DepartmentController(IDepartmentService service)
+        public DepartmentController(IDepartmentService service,IFacultyService fService)
         {
             _service = service;
+            _fService = fService;
         }
 
         [HttpGet]
@@ -29,11 +31,14 @@ namespace Digital.Diary.WebServer.Controllers.Academic
 
             foreach (var entity in entities)
             {
+                var fName = _fService.GetFirstOrDefault(x => x.Id == entity.FacultyId).FacultyName;
+
                 var entityVm = new DepartmentVm()
                 {
                     Id = entity.Id,
                     DeptName = entity.DeptName,
-                    FacultyId = entity.FacultyId
+                    FacultyId = entity.FacultyId,
+                    FacultyName = fName,
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -98,6 +103,8 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         public IActionResult Details(Guid id)
         {
             var existingEntity = _service.GetFirstOrDefault(x => x.Id == id);
+            var fName = _fService.GetFirstOrDefault(x => x.Id == existingEntity.FacultyId).FacultyName;
+
             if (existingEntity == null)
             {
                 return BadRequest("No entity found");
@@ -107,6 +114,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                 Id = existingEntity.Id,
                 DeptName = existingEntity.DeptName,
                 FacultyId = existingEntity.FacultyId,
+                FacultyName= fName,
             };
 
             return Ok(entity);

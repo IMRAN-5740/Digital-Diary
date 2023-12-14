@@ -259,7 +259,6 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\bin\Release\net8.0-ios\io
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\bin\Release\net8.0-ios\iossimulator-x64\libxamarin-dotnet-nativeaot.a
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\bin\Release\net8.0-ios\iossimulator-x64\libxamarin-dotnet.a
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\bin\Release\net8.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
-E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\build-signature\signature
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\mauiimage.inputs
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\mauifont.inputs
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\mauisplash.inputs
