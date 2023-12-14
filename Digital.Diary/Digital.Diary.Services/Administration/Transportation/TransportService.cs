@@ -1,25 +1,20 @@
-﻿using Digital.Diary.Models.EntityModels.Administration.Associations;
-using Digital.Diary.Models;
+﻿using Digital.Diary.Models;
 using Digital.Diary.Models.EntityModels.Administration.Transportation;
 using Digital.Diary.Repositories.Abstractions.Administration.Transportations;
-using Digital.Diary.Repositories.Abstractions.Base;
 using Digital.Diary.Services.Abstractions.Administration.Transportation;
 using Digital.Diary.Services.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Digital.Diary.Services.Administration.Transportation
 {
     public class TransportService : Service<Transport>, ITransportService
     {
         private readonly ITransportRepository _repo;
+
         public TransportService(ITransportRepository repository) : base(repository)
         {
             _repo = repository;
         }
+
         public override Result Create(Transport entity)
         {
             var result = new Result();

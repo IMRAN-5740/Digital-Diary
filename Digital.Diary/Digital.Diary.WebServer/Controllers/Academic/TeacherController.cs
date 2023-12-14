@@ -14,7 +14,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         private readonly IDepartmentService _deptService;
         private readonly IFacultyService _fService;
 
-        public TeacherController(ITeacherService service,IDesignationService dService, IDepartmentService deptService,IFacultyService fService)
+        public TeacherController(ITeacherService service, IDesignationService dService, IDepartmentService deptService, IFacultyService fService)
         {
             _service = service;
             _dService = dService;
@@ -49,10 +49,9 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     DesignationId = entity.DesignationId,
                     FacultyId = entity.FacultyId,
                     DepartmentId = entity.DepartmentId,
-                    DesignationName=dName,
-                    DepartmentName=deptName,
-                    FacultyName=fName
-
+                    DesignationName = dName,
+                    DepartmentName = deptName,
+                    FacultyName = fName
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -140,9 +139,9 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                 DesignationId = existingEntity.DesignationId,
                 FacultyId = existingEntity.FacultyId,
                 DepartmentId = existingEntity.DepartmentId,
-                DesignationName=dName,
-                DepartmentName=deptName,
-                FacultyName=fName
+                DesignationName = dName,
+                DepartmentName = deptName,
+                FacultyName = fName
             };
             return Ok(entity);
         }

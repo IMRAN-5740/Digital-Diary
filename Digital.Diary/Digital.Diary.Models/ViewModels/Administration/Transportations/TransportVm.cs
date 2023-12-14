@@ -1,9 +1,4 @@
 ﻿using Digital.Diary.Models.EntityModels.Administration.Transportation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Digital.Diary.Models.ViewModels.Administration.Transportations
 {
@@ -22,9 +17,8 @@ namespace Digital.Diary.Models.ViewModels.Administration.Transportations
                 BusName = BusName,
                 StartingPoint = StartingPoint,
                 EndingPoint = EndingPoint,
-                Id=Id?? Guid.Empty
+                Id = Id ?? Guid.Empty
             };
         }
-
     }
 }

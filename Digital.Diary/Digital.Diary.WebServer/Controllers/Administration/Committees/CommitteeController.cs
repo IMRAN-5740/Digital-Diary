@@ -1,9 +1,6 @@
-﻿using Digital.Diary.Models.EntityModels.Administration.Associations;
-using Digital.Diary.Models.EntityModels.Administration.Committees;
-using Digital.Diary.Models.ViewModels.Administration.Associations;
+﻿using Digital.Diary.Models.EntityModels.Administration.Committees;
 using Digital.Diary.Models.ViewModels.Administration.Committees;
 using Digital.Diary.Services.Abstractions.Administration.Committees;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Administration.Committees
@@ -18,6 +15,7 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Committees
         {
             _service = service;
         }
+
         [HttpGet]
         [Route("GetAll")]
         public IActionResult GetAll()
@@ -63,7 +61,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Committees
                         ModelState.AddModelError("", error);
                     }
                     return Ok(result);
-
                 }
             }
 

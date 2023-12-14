@@ -13,8 +13,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         private IFacultyService _fService;
         private IDesignationService _dService;
 
-
-        public DeanController(IDeanService service,IFacultyService fService,IDesignationService dService)
+        public DeanController(IDeanService service, IFacultyService fService, IDesignationService dService)
         {
             _service = service;
             _fService = fService;
@@ -25,7 +24,6 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         [Route("GetAll")]
         public IActionResult GetAll()
         {
-            
             var entities = _service.GetAll();
             if (!entities.Any())
             {
@@ -45,8 +43,8 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     Email = entity.Email,
                     PhoneNum = entity.PhoneNum,
                     ProfileImage = entity.ProfileImage,
-                    DeginationId=entity.DesignationId,
-                    DesignationName=dName,
+                    DeginationId = entity.DesignationId,
+                    DesignationName = dName,
                     FacultyId = entity.FacultyId,
                     FacultyName = fName
                 };
@@ -132,10 +130,10 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                 Email = existingEntity.Email,
                 PhoneNum = existingEntity.PhoneNum,
                 ProfileImage = existingEntity.ProfileImage,
-                DeginationId= existingEntity.DesignationId,
-                DesignationName=dName,
+                DeginationId = existingEntity.DesignationId,
+                DesignationName = dName,
                 FacultyId = existingEntity.FacultyId,
-                FacultyName= fName,
+                FacultyName = fName,
             };
 
             return Ok(entity);

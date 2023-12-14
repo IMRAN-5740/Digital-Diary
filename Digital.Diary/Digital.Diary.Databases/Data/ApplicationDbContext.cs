@@ -131,7 +131,6 @@ namespace Digital.Diary.Databases.Data
                 .HasForeignKey(d => d.DesignationId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-
             // CrTable to Department (Many-to-One)
             modelBuilder.Entity<CrTable>()
                 .HasOne(cr => cr.Department)

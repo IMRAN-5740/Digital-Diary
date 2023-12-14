@@ -12,7 +12,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         private readonly IDepartmentService _service;
         private readonly IFacultyService _fService;
 
-        public DepartmentController(IDepartmentService service,IFacultyService fService)
+        public DepartmentController(IDepartmentService service, IFacultyService fService)
         {
             _service = service;
             _fService = fService;
@@ -115,7 +115,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                 Id = existingEntity.Id,
                 DeptName = existingEntity.DeptName,
                 FacultyId = existingEntity.FacultyId,
-                FacultyName= fName,
+                FacultyName = fName,
             };
 
             return Ok(entity);

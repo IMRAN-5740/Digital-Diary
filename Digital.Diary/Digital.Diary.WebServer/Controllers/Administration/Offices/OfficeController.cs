@@ -1,9 +1,6 @@
-﻿using Digital.Diary.Models.EntityModels.Administration.Committees;
-using Digital.Diary.Models.EntityModels.Administration.Offices;
-using Digital.Diary.Models.ViewModels.Administration.Committees;
+﻿using Digital.Diary.Models.EntityModels.Administration.Offices;
 using Digital.Diary.Models.ViewModels.Administration.Offices;
 using Digital.Diary.Services.Abstractions.Administration.Offices;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Administration.Offices
@@ -13,10 +10,12 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Offices
     public class OfficeController : ControllerBase
     {
         private readonly IOfficeService _service;
-        public OfficeController(IOfficeService service )
+
+        public OfficeController(IOfficeService service)
         {
             _service = service;
         }
+
         [HttpGet]
         [Route("GetAll")]
         public IActionResult GetAll()
@@ -62,7 +61,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Offices
                         ModelState.AddModelError("", error);
                     }
                     return Ok(result);
-
                 }
             }
 
@@ -143,6 +141,5 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Offices
             }
             return Ok();
         }
-
     }
 }

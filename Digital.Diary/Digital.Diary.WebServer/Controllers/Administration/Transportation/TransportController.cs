@@ -1,9 +1,6 @@
-﻿using Digital.Diary.Models.EntityModels.Administration.Offices;
-using Digital.Diary.Models.EntityModels.Administration.Transportation;
-using Digital.Diary.Models.ViewModels.Administration.Offices;
+﻿using Digital.Diary.Models.EntityModels.Administration.Transportation;
 using Digital.Diary.Models.ViewModels.Administration.Transportations;
 using Digital.Diary.Services.Abstractions.Administration.Transportation;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Administration.Transportation
@@ -13,6 +10,7 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Transportation
     public class TransportController : ControllerBase
     {
         private readonly ITransportService _service;
+
         public TransportController(ITransportService service)
         {
             _service = service;
@@ -36,8 +34,8 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Transportation
                 {
                     Id = entity.Id,
                     BusName = entity.BusName,
-                    StartingPoint=entity.StartingPoint,
-                    EndingPoint=entity.EndingPoint,
+                    StartingPoint = entity.StartingPoint,
+                    EndingPoint = entity.EndingPoint,
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -65,7 +63,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Transportation
                         ModelState.AddModelError("", error);
                     }
                     return Ok(result);
-
                 }
             }
 
@@ -83,8 +80,8 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Transportation
                 return BadRequest("No entity found");
             }
             existingEntity.BusName = finalEntity.BusName;
-            existingEntity.StartingPoint=finalEntity.StartingPoint;
-            existingEntity.EndingPoint=finalEntity.EndingPoint;
+            existingEntity.StartingPoint = finalEntity.StartingPoint;
+            existingEntity.EndingPoint = finalEntity.EndingPoint;
 
             var result = _service.Update(existingEntity);
             if (result.IsSucced)

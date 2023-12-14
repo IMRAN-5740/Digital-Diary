@@ -12,7 +12,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         private readonly ICrTableService _service;
         private readonly IDepartmentService _deptService;
 
-        public CrTableController(ICrTableService service,IDepartmentService deptService)
+        public CrTableController(ICrTableService service, IDepartmentService deptService)
         {
             _service = service;
             _deptService = deptService;
@@ -41,7 +41,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     PhoneNum = entity.PhoneNum,
                     ProfileImage = entity.ProfileImage,
                     DepartmentId = entity.DepartmentId,
-                    DepartmentName=deptName
+                    DepartmentName = deptName
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -125,7 +125,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                 PhoneNum = existingEntity.PhoneNum,
                 ProfileImage = existingEntity.ProfileImage,
                 DepartmentId = existingEntity.DepartmentId,
-                DepartmentName=deptName
+                DepartmentName = deptName
             };
 
             return Ok(entity);

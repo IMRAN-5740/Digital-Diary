@@ -18,7 +18,6 @@ using Digital.Diary.Services.Administration.Associations;
 using Digital.Diary.Services.Administration.Committees;
 using Digital.Diary.Services.Administration.Offices;
 using Digital.Diary.Services.Administration.Transportation;
-using Digital.Diary.Services.Base;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Digital.Diary.Configurations
@@ -30,6 +29,7 @@ namespace Digital.Diary.Configurations
             //dependency resolving mechanisms
 
             #region Academic
+
             services.AddTransient<IDesignationRepository, DesignationRepository>();
             services.AddTransient<IDesignationService, DesignationService>();
 
@@ -57,7 +57,8 @@ namespace Digital.Diary.Configurations
             services.AddTransient<ICrTableRepository, CrTableRepository>();
             services.AddTransient<ICrTableService, CrTableService>();
 
-            #endregion  Academic
+            #endregion Academic
+
             #region Administration
 
             services.AddTransient<IAssociationRepository, AssociationRepository>();
@@ -65,8 +66,6 @@ namespace Digital.Diary.Configurations
 
             services.AddTransient<IAssociationEmployeeRepository, AssociationEmployeeRepository>();
             services.AddTransient<IAssociationEmployeeService, AssociationEmployeeService>();
-
-
 
             services.AddTransient<IOfficeRepository, OfficeRepository>();
             services.AddTransient<IOfficeService, OfficeService>();
@@ -87,9 +86,6 @@ namespace Digital.Diary.Configurations
             services.AddTransient<ITransportEmployeeService, TransportEmployeeService>();
 
             #endregion Administration
-
-
-
         }
     }
 }

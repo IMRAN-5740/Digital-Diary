@@ -1,11 +1,7 @@
-﻿using Digital.Diary.Models.EntityModels.Administration.Committees;
-using Digital.Diary.Models.EntityModels.Administration.Offices;
-using Digital.Diary.Models.ViewModels.Administration.Committees;
+﻿using Digital.Diary.Models.EntityModels.Administration.Offices;
 using Digital.Diary.Models.ViewModels.Administration.Offices;
 using Digital.Diary.Services.Abstractions.Academic;
-using Digital.Diary.Services.Abstractions.Administration.Committees;
 using Digital.Diary.Services.Abstractions.Administration.Offices;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Administration.Offices
@@ -28,7 +24,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Offices
             _oService = oService;
         }
 
-
         [HttpGet]
         [Route("GetAll")]
         public IActionResult GetAll()
@@ -45,7 +40,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Offices
                 var dName = _dService.GetFirstOrDefault(x => x.Id == entity.DesignationId).DesignationName;
                 var oName = _oService.GetFirstOrDefault(x => x.Id == entity.OfficeId).OfficeName;
 
-
                 var entityVm = new OfficeEmployeeVm()
                 {
                     Id = entity.Id,
@@ -57,7 +51,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Offices
                     OfficeId = entity.OfficeId,
                     DesignationName = dName,
                     OfficeName = oName
-
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -85,7 +78,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Offices
                         ModelState.AddModelError("", error);
                     }
                     return Ok(result);
-
                 }
             }
 
@@ -148,7 +140,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Offices
                 OfficeId = existingEntity.OfficeId,
                 OfficeName = oName,
                 DesignationName = dName,
-
             };
 
             return Ok(entity);

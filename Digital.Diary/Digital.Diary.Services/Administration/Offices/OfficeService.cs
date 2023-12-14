@@ -1,25 +1,20 @@
-﻿using Digital.Diary.Models.EntityModels.Administration.Associations;
-using Digital.Diary.Models;
+﻿using Digital.Diary.Models;
 using Digital.Diary.Models.EntityModels.Administration.Offices;
 using Digital.Diary.Repositories.Abstractions.Administration.Offices;
-using Digital.Diary.Repositories.Abstractions.Base;
 using Digital.Diary.Services.Abstractions.Administration.Offices;
 using Digital.Diary.Services.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Digital.Diary.Services.Administration.Offices
 {
     public class OfficeService : Service<Office>, IOfficeService
     {
         private readonly IOfficeRepository _repo;
+
         public OfficeService(IOfficeRepository repository) : base(repository)
         {
             _repo = repository;
         }
+
         public override Result Create(Office entity)
         {
             var result = new Result();

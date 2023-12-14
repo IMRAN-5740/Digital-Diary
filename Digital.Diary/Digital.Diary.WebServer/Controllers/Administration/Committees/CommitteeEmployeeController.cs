@@ -1,11 +1,7 @@
-﻿using Digital.Diary.Models.EntityModels.Administration.Associations;
-using Digital.Diary.Models.EntityModels.Administration.Committees;
-using Digital.Diary.Models.ViewModels.Administration.Associations;
+﻿using Digital.Diary.Models.EntityModels.Administration.Committees;
 using Digital.Diary.Models.ViewModels.Administration.Committees;
 using Digital.Diary.Services.Abstractions.Academic;
-using Digital.Diary.Services.Abstractions.Administration.Associations;
 using Digital.Diary.Services.Abstractions.Administration.Committees;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Administration.Committees
@@ -44,7 +40,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Committees
                 var dName = _dService.GetFirstOrDefault(x => x.Id == entity.DesignationId).DesignationName;
                 var cName = _cService.GetFirstOrDefault(x => x.Id == entity.CommitteeId).CommitteeName;
 
-
                 var entityVm = new CommitteeEmployeeVm()
                 {
                     Id = entity.Id,
@@ -56,7 +51,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Committees
                     CommitteeId = entity.CommitteeId,
                     DesignationName = dName,
                     CommitteeName = cName,
-
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -84,7 +78,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Committees
                         ModelState.AddModelError("", error);
                     }
                     return Ok(result);
-
                 }
             }
 
@@ -147,7 +140,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Committees
                 CommitteeId = existingEntity.CommitteeId,
                 CommitteeName = cName,
                 DesignationName = dName,
-
             };
 
             return Ok(entity);
@@ -182,4 +174,3 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Committees
         }
     }
 }
-

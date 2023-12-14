@@ -1,11 +1,7 @@
-﻿using Digital.Diary.Models.EntityModels.Administration.Offices;
-using Digital.Diary.Models.EntityModels.Administration.Transportation;
-using Digital.Diary.Models.ViewModels.Administration.Offices;
+﻿using Digital.Diary.Models.EntityModels.Administration.Transportation;
 using Digital.Diary.Models.ViewModels.Administration.Transportations;
 using Digital.Diary.Services.Abstractions.Academic;
-using Digital.Diary.Services.Abstractions.Administration.Offices;
 using Digital.Diary.Services.Abstractions.Administration.Transportation;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Administration.Transportation
@@ -16,18 +12,18 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Transportation
     {
         private readonly ITransportEmployeeService _service;
         private readonly IDesignationService _dService;
-        private readonly ITransportService  _tService;
+        private readonly ITransportService _tService;
 
         public TransportEmployeeController(
             ITransportEmployeeService service,
             IDesignationService dService,
             ITransportService tService)
         {
-
             _service = service;
             _dService = dService;
             _tService = tService;
         }
+
         [HttpGet]
         [Route("GetAll")]
         public IActionResult GetAll()
@@ -44,7 +40,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Transportation
                 var dName = _dService.GetFirstOrDefault(x => x.Id == entity.DesignationId).DesignationName;
                 var tName = _tService.GetFirstOrDefault(x => x.Id == entity.TransportId).BusName;
 
-
                 var entityVm = new TransportEmployeeVm()
                 {
                     Id = entity.Id,
@@ -56,7 +51,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Transportation
                     TransportId = entity.TransportId,
                     DesignationName = dName,
                     BusName = tName
-
                 };
                 entityListVMs.Add(entityVm);
             }
@@ -84,7 +78,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Transportation
                         ModelState.AddModelError("", error);
                     }
                     return Ok(result);
-
                 }
             }
 
@@ -144,10 +137,9 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Transportation
                 PhoneNum = existingEntity.PhoneNum,
                 ProfileImage = existingEntity.ProfileImage,
                 DesignationId = existingEntity.DesignationId,
-                 TransportId= existingEntity.TransportId,
+                TransportId = existingEntity.TransportId,
                 BusName = tName,
                 DesignationName = dName,
-
             };
 
             return Ok(entity);
@@ -180,6 +172,5 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Transportation
             }
             return Ok();
         }
-
     }
 }

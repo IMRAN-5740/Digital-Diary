@@ -1,9 +1,6 @@
 ﻿using Digital.Diary.Models.EntityModels.Administration.Associations;
-using Digital.Diary.Models.EntityModels.Common;
 using Digital.Diary.Models.ViewModels.Administration.Associations;
-using Digital.Diary.Models.ViewModels.Common;
 using Digital.Diary.Services.Abstractions.Administration.Associations;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Administration.Associations
@@ -13,10 +10,12 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Associations
     public class AssociationController : ControllerBase
     {
         private readonly IAssociationService _service;
+
         public AssociationController(IAssociationService service)
         {
             _service = service;
         }
+
         [HttpGet]
         [Route("GetAll")]
         public IActionResult GetAll()
@@ -62,7 +61,6 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Associations
                         ModelState.AddModelError("", error);
                     }
                     return Ok(result);
-
                 }
             }
 
@@ -143,5 +141,4 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Associations
             return Ok();
         }
     }
-
 }
