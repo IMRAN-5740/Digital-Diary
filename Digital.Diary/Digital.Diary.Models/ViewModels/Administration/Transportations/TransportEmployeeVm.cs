@@ -18,7 +18,7 @@ namespace Digital.Diary.Models.ViewModels.Administration.Transportations
         public string PhoneNum { get; set; } = default!;
         public string? ProfileImage { get; set; }
         public Guid TransportId { get; set; }
-        public string? TransportName { get; set; }
+        public string? BusName { get; set; }
         public Guid DesignationId { get; set; }
         public string? DesignationName { get; set; }
 
