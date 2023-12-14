@@ -1,10 +1,3 @@
-E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.csproj.AssemblyReference.cache
-E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.GeneratedMSBuildEditorConfig.editorconfig
-E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.AssemblyInfoInputs.cache
-E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.AssemblyInfo.cs
-E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.csproj.CoreCompileInputs.cache
-E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.MvcApplicationPartsAssemblyInfo.cache
-E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.sourcelink.json
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\appsettings.Development.json
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\appsettings.json
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.WebServer.exe
@@ -134,6 +127,14 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Models.pdb
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Services.pdb
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\bin\Debug\net8.0\Digital.Diary.Services.Abstractions.pdb
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.csproj.AssemblyReference.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.GeneratedMSBuildEditorConfig.editorconfig
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.AssemblyInfoInputs.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.AssemblyInfo.cs
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.csproj.CoreCompileInputs.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.MvcApplicationPartsAssemblyInfo.cs
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.MvcApplicationPartsAssemblyInfo.cache
+E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.sourcelink.json
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\staticwebassets.build.json
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\staticwebassets.development.json
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\staticwebassets\msbuild.Digital.Diary.WebServer.Microsoft.AspNetCore.StaticWebAssets.props
@@ -148,4 +149,3 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\refint\D
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.pdb
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.genruntimeconfig.cache
 E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\ref\Digital.Diary.WebServer.dll
-E:\Digital Diary\Digital.Diary\Digital.Diary.WebServer\obj\Debug\net8.0\Digital.Diary.WebServer.MvcApplicationPartsAssemblyInfo.cs

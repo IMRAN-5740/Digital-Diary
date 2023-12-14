@@ -1,6 +1,6 @@
 ﻿using Digital.Diary.Models.EntityModels.Academic;
 using Digital.Diary.Models.ViewModels.Academic;
-using Digital.Diary.Services.Abstractions;
+using Digital.Diary.Services.Abstractions.Academic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Academic
@@ -9,10 +9,10 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     [ApiController]
     public class TeacherController : ControllerBase
     {
-        private ITeacherService _service;
-        private IDesignationService _dService;
-        private IDepartmentService _deptService;
-        private IFacultyService _fService;
+        private readonly ITeacherService _service;
+        private readonly IDesignationService _dService;
+        private readonly IDepartmentService _deptService;
+        private readonly IFacultyService _fService;
 
         public TeacherController(ITeacherService service,IDesignationService dService, IDepartmentService deptService,IFacultyService fService)
         {
@@ -79,6 +79,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     {
                         ModelState.AddModelError("", error);
                     }
+                    return Ok(result);
                 }
             }
             return Ok(createModel);

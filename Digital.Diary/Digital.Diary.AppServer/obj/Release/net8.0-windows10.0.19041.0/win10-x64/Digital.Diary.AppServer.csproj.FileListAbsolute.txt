@@ -97,11 +97,6 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-window
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\mauifont.stamp
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf
-E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
-E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
-E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
-E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
-E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png
@@ -148,6 +143,11 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-window
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\Digital.Diary.AppServer.AssemblyInfoInputs.cache
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-windows10.0.19041.0\win10-x64\Digital.Diary.AppServer.AssemblyInfo.cs

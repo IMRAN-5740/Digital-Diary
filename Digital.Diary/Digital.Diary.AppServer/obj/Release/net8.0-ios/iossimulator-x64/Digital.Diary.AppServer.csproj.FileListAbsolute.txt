@@ -268,9 +268,6 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\io
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@2x.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@3x.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\mauisplash.stamp
-E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
-E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
-E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -283,6 +280,9 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\io
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\mauiimage.stamp
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\resizetizer\f\MauiInfo.plist
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Release\net8.0-ios\iossimulator-x64\mauifont.stamp

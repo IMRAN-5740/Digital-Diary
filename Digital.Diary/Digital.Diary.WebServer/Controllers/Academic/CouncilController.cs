@@ -1,6 +1,6 @@
 ﻿using Digital.Diary.Models.EntityModels.Academic;
 using Digital.Diary.Models.ViewModels.Academic;
-using Digital.Diary.Services.Abstractions;
+using Digital.Diary.Services.Abstractions.Academic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Academic
@@ -9,8 +9,8 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     [ApiController]
     public class CouncilController : ControllerBase
     {
-        private ICouncilService _service;
-        private IDesignationService _dService;
+        private readonly ICouncilService _service;
+        private readonly IDesignationService _dService;
 
         public CouncilController(ICouncilService service,IDesignationService dService)
         {
@@ -68,6 +68,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     {
                         ModelState.AddModelError("", error);
                     }
+                    return Ok(result);
                 }
             }
             return Ok(createModel);

@@ -1,6 +1,6 @@
 ﻿using Digital.Diary.Models.EntityModels.Academic;
 using Digital.Diary.Models.ViewModels.Academic;
-using Digital.Diary.Services.Abstractions;
+using Digital.Diary.Services.Abstractions.Academic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Academic
@@ -9,8 +9,8 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     [ApiController]
     public class CrTableController : ControllerBase
     {
-        private ICrTableService _service;
-        IDepartmentService _deptService;
+        private readonly ICrTableService _service;
+        private readonly IDepartmentService _deptService;
 
         public CrTableController(ICrTableService service,IDepartmentService deptService)
         {
@@ -68,6 +68,7 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                     {
                         ModelState.AddModelError("", error);
                     }
+                    return Ok(result);
                 }
             }
 
