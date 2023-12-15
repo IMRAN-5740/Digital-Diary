@@ -9,9 +9,9 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     [ApiController]
     public class DeanController : ControllerBase
     {
-        private IDeanService _service;
-        private IFacultyService _fService;
-        private IDesignationService _dService;
+        private readonly IDeanService _service;
+        private readonly IFacultyService _fService;
+        private readonly IDesignationService _dService;
 
         public DeanController(IDeanService service, IFacultyService fService, IDesignationService dService)
         {

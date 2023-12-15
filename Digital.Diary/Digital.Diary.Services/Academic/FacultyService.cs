@@ -8,7 +8,7 @@ namespace Digital.Diary.Services.Academic
 {
     public class FacultyService : Service<Faculty>, IFacultyService
     {
-        private IFacultyRepository _repo;
+        private readonly IFacultyRepository _repo;
 
         public FacultyService(IFacultyRepository repo) : base(repo)
         {

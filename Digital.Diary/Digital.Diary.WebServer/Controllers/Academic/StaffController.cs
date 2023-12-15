@@ -9,9 +9,9 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     [ApiController]
     public class StaffController : ControllerBase
     {
-        private IStaffService _service;
-        private IDesignationService _dService;
-        private IDepartmentService _deptService;
+        private readonly IStaffService _service;
+        private readonly IDesignationService _dService;
+        private readonly IDepartmentService _deptService;
 
         public StaffController(IStaffService service, IDesignationService dService, IDepartmentService deptService)
         {

@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Digital.Diary.AppServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+af9f3724cf2d6ab71bd8386a77acf10329b34087")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f7c132e98501aa5540fe8a5876bf813a229db392")]
 [assembly: System.Reflection.AssemblyProductAttribute("Digital.Diary.AppServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Digital.Diary.AppServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
