@@ -3,21 +3,25 @@ using Digital.Diary.Repositories.Abstractions.Administration.Associations;
 using Digital.Diary.Repositories.Abstractions.Administration.Committees;
 using Digital.Diary.Repositories.Abstractions.Administration.Offices;
 using Digital.Diary.Repositories.Abstractions.Administration.Transportations;
+using Digital.Diary.Repositories.Abstractions.Emergency_Services;
 using Digital.Diary.Repositories.Academic;
 using Digital.Diary.Repositories.Administration.Associations;
 using Digital.Diary.Repositories.Administration.Committees;
 using Digital.Diary.Repositories.Administration.Offices;
 using Digital.Diary.Repositories.Administration.Transportation;
+using Digital.Diary.Repositories.Emergency_Services;
 using Digital.Diary.Services.Abstractions.Academic;
 using Digital.Diary.Services.Abstractions.Administration.Associations;
 using Digital.Diary.Services.Abstractions.Administration.Committees;
 using Digital.Diary.Services.Abstractions.Administration.Offices;
 using Digital.Diary.Services.Abstractions.Administration.Transportation;
+using Digital.Diary.Services.Abstractions.Emergency_Services;
 using Digital.Diary.Services.Academic;
 using Digital.Diary.Services.Administration.Associations;
 using Digital.Diary.Services.Administration.Committees;
 using Digital.Diary.Services.Administration.Offices;
 using Digital.Diary.Services.Administration.Transportation;
+using Digital.Diary.Services.Emergency_Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Digital.Diary.Configurations
@@ -86,6 +90,43 @@ namespace Digital.Diary.Configurations
             services.AddTransient<ITransportEmployeeService, TransportEmployeeService>();
 
             #endregion Administration
+
+            #region Emergency Services
+
+            services.AddTransient<IAmbulanceRepository, AmbulanceRepository>();
+            services.AddTransient<IAmbulanceService, AmbulanceService>();
+
+            services.AddTransient<IAnsarForceRepository, AnsarForceRepository>();
+            services.AddTransient<IAnsarForceService, AnsarForceService>();
+
+            services.AddTransient<IBusRepository, BusRepository>();
+            services.AddTransient<IBusService, BusService>();
+
+            services.AddTransient<ICourierRepository, CourierRepository>();
+            services.AddTransient<ICourierService, CourierService>();
+
+            services.AddTransient<IDistrictRepository, DistrictRepository>();
+            services.AddTransient<IDistrictService, DistrictService>();
+
+            services.AddTransient<IFireStationRepository, FireStationRepository>();
+            services.AddTransient<IFireStationService, FireStationService>();
+
+            services.AddTransient<IGuestHouseRepository, GuestHouseRepository>();
+            services.AddTransient<IGuestHouseService, GuestHouseService>();
+
+            services.AddTransient<IJournalistRepository, JournalistRepository>();
+            services.AddTransient<IJournalistService, JournalistService>();
+
+            services.AddTransient<IPoliceStationRepository, PoliceStationRepository>();
+            services.AddTransient<IPoliceStationService, PoliceStationService>();
+
+            services.AddTransient<IPostOfficeRepository, PostOfficeRepository>();
+            services.AddTransient<IPostOfficeService, PostOfficeService>();
+
+            services.AddTransient<ITrainRepository, TranRepository>();
+            services.AddTransient<ITrainService, TrainService>();
+
+            #endregion Emergency Services
         }
     }
 }

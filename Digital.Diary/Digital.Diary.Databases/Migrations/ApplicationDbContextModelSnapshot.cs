@@ -529,7 +529,7 @@ namespace Digital.Diary.Databases.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("PhoneNum")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -552,7 +552,7 @@ namespace Digital.Diary.Databases.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("PhoneNum")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -579,7 +579,7 @@ namespace Digital.Diary.Databases.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("PhoneNum")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -606,7 +606,7 @@ namespace Digital.Diary.Databases.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("PhoneNum")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -629,7 +629,7 @@ namespace Digital.Diary.Databases.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("PhoneNum")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -652,7 +652,7 @@ namespace Digital.Diary.Databases.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("PhoneNum")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -675,7 +675,7 @@ namespace Digital.Diary.Databases.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("PhoneNum")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -698,7 +698,7 @@ namespace Digital.Diary.Databases.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("PhoneNum")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -720,7 +720,7 @@ namespace Digital.Diary.Databases.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("PhoneNum")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -748,10 +748,6 @@ namespace Digital.Diary.Databases.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("PhoneNum")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -760,7 +756,8 @@ namespace Digital.Diary.Databases.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ProfileImage")
+                    b.Property<string>("PostOfficeName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
