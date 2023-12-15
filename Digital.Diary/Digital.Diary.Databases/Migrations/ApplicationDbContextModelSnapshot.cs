@@ -807,6 +807,10 @@ namespace Digital.Diary.Databases.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("WebAddress")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

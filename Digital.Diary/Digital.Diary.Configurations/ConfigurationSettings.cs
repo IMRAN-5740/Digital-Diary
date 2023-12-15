@@ -4,24 +4,28 @@ using Digital.Diary.Repositories.Abstractions.Administration.Committees;
 using Digital.Diary.Repositories.Abstractions.Administration.Offices;
 using Digital.Diary.Repositories.Abstractions.Administration.Transportations;
 using Digital.Diary.Repositories.Abstractions.Emergency_Services;
+using Digital.Diary.Repositories.Abstractions.Miscellaneous;
 using Digital.Diary.Repositories.Academic;
 using Digital.Diary.Repositories.Administration.Associations;
 using Digital.Diary.Repositories.Administration.Committees;
 using Digital.Diary.Repositories.Administration.Offices;
 using Digital.Diary.Repositories.Administration.Transportation;
 using Digital.Diary.Repositories.Emergency_Services;
+using Digital.Diary.Repositories.Miscellaneous;
 using Digital.Diary.Services.Abstractions.Academic;
 using Digital.Diary.Services.Abstractions.Administration.Associations;
 using Digital.Diary.Services.Abstractions.Administration.Committees;
 using Digital.Diary.Services.Abstractions.Administration.Offices;
 using Digital.Diary.Services.Abstractions.Administration.Transportation;
 using Digital.Diary.Services.Abstractions.Emergency_Services;
+using Digital.Diary.Services.Abstractions.Miscellaneous;
 using Digital.Diary.Services.Academic;
 using Digital.Diary.Services.Administration.Associations;
 using Digital.Diary.Services.Administration.Committees;
 using Digital.Diary.Services.Administration.Offices;
 using Digital.Diary.Services.Administration.Transportation;
 using Digital.Diary.Services.Emergency_Services;
+using Digital.Diary.Services.Miscellaneous;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Digital.Diary.Configurations
@@ -127,6 +131,16 @@ namespace Digital.Diary.Configurations
             services.AddTransient<ITrainService, TrainService>();
 
             #endregion Emergency Services
+
+            #region Miscellaneous
+
+            services.AddTransient<IBankRepository, BankRepository>();
+            services.AddTransient<IBankService, BankService>();
+
+            services.AddTransient<IBankEmployeeRepository, BankEmployeeRepository>();
+            services.AddTransient<IBankEmployeeService, BankEmployeeService>();
+
+            #endregion Miscellaneous
         }
     }
 }
