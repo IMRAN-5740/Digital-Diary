@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Digital.Diary.Databases")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7c132e98501aa5540fe8a5876bf813a229db392")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9c1f5bcf21126895c261494cc05cec653378e2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Digital.Diary.Databases")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Digital.Diary.Databases")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

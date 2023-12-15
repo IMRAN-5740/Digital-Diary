@@ -15,7 +15,6 @@ namespace Digital.Diary.Models.EntityModels.Miscellaneous
 
         [DisplayName("Designation Name")]
         public Guid DesignationId { get; set; } = default!;
-
         public Designation Designation { get; set; } = default!;
     }
 }
