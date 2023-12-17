@@ -1,4 +1,6 @@
-﻿namespace Digital.Diary.AppServer
+﻿using Microsoft.Extensions.Logging;
+
+namespace Digital.Diary.AppServer
 {
     public static class MauiProgram
     {

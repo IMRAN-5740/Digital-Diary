@@ -8,7 +8,7 @@
 
   <Identity Name="maui-package-name-placeholder" Publisher="CN=User Name" Version="0.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="AA8E5BA6-6EBD-46A7-97D4-D01073963660" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="C7C3C582-7033-47E9-8670-E2B2F2E15781" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>$placeholder$</DisplayName>
@@ -40,7 +40,7 @@
   </Applications>
 
   <Capabilities>
-	  <DeviceCapability Name="location"/>
+    <rescap:Capability Name="runFullTrust" />
   </Capabilities>
 
 </Package>

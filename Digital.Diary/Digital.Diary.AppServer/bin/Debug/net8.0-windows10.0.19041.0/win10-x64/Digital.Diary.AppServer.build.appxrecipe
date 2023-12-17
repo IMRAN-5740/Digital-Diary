@@ -61,6 +61,9 @@
     <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\administration.scale-100.png">
+      <PackagePath>administration.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
     </AppxPackagedFile>
@@ -213,6 +216,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\faculty.scale-100.png">
+      <PackagePath>faculty.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\faculty.scale-125.png">
+      <PackagePath>faculty.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\faculty.scale-150.png">
+      <PackagePath>faculty.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\faculty.scale-200.png">
+      <PackagePath>faculty.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\faculty.scale-400.png">
+      <PackagePath>faculty.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\others.scale-100.png">
+      <PackagePath>others.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\others.scale-125.png">
+      <PackagePath>others.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\others.scale-150.png">
+      <PackagePath>others.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\others.scale-200.png">
+      <PackagePath>others.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\others.scale-400.png">
+      <PackagePath>others.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\services.scale-100.png">
+      <PackagePath>services.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Digital.Diary.AppServer.deps.json">
       <PackagePath>Digital.Diary.AppServer.deps.json</PackagePath>

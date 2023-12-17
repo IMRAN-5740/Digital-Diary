@@ -1,6 +1,7 @@
 ﻿using Digital.Diary.Models.EntityModels.Academic;
 using Digital.Diary.Models.ViewModels.Academic;
 using Digital.Diary.Services.Abstractions.Academic;
+using Digital.Diary.Services.Abstractions.Administration.Associations;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Digital.Diary.WebServer.Controllers.Academic

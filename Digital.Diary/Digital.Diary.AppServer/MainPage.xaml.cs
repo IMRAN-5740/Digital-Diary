@@ -2,23 +2,18 @@
 {
     public partial class MainPage : ContentPage
     {
-        private int count = 0;
+        private readonly HttpClient _httpClient = new();
+        private const string BaseAddress = "https://61vf52vz-5116.inc1.devtunnels.ms";
 
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnCounterClicked(object sender, EventArgs e)
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            var resultJson = await _httpClient.GetStringAsync($"{BaseAddress}/api/Department/GetAll/");
+            weatherResult.Text = resultJson;
         }
     }
 }

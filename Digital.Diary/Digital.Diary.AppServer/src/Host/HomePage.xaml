@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            x:Class="Digital.Diary.src.Host.HomePage"
+            Title="HomePage"
+            BarBackgroundColor="Green"
+            BarTextColor="White"
+            SelectedTabColor="Red"
+            UnselectedTabColor="Bisque">
+
+    <ContentPage Title="অনুষদ" IconImageSource="faculty">
+        <ScrollView>
+            <FlexLayout Direction="Row" Wrap="Wrap" AlignContent="Start">
+                <!-- First Row - First Column -->
+                <Frame CornerRadius="20"
+              Margin="10"
+              BackgroundColor="#2B0B98"
+              FlexLayout.Grow="1"
+                  HeightRequest="150"
+                  WidthRequest="160"
+                  HorizontalOptions="Start"
+                  VerticalOptions="Start"
+                       BorderColor="Orange"
+                       
+                       >
+
+                    <StackLayout>
+                        <Label Text="এটি অনুষদ ট্যাব"
+                      FontAttributes="Bold"
+                      FontSize="18"
+                      HorizontalOptions="Center"
+                      VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Frame>
+                <!-- First Row - Second Column -->
+                <Frame CornerRadius="20"
+              Margin="10"
+              BackgroundColor="#2B0B98"
+              FlexLayout.Grow="1"
+                   HeightRequest="150"
+                    WidthRequest="160"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                       
+                       BorderColor="Orange">
+
+                    <StackLayout>
+                        <Label Text="এটি অনুষদ ট্যাব"
+                          FontAttributes="Bold"
+                          FontSize="18"
+                          HorizontalOptions="Center"
+                          VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Frame>
+                <!-- Second Row - First Column -->
+                <Frame CornerRadius="20"
+              Margin="10"
+              BackgroundColor="#2B0B98"
+              FlexLayout.Grow="1"
+                   HeightRequest="150"
+WidthRequest="160"
+HorizontalOptions="Start"
+VerticalOptions="Start"
+                       
+                       BorderColor="Orange">
+
+                    <StackLayout>
+                        <Label Text="এটি অনুষদ ট্যাব"
+                          FontAttributes="Bold"
+                          FontSize="18"
+                          HorizontalOptions="Center"
+                          VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Second Row - Second Column -->
+                <Frame CornerRadius="20"
+              Margin="10"
+              BackgroundColor="#2B0B98"
+              FlexLayout.Grow="1"
+                   HeightRequest="150"
+                    WidthRequest="160"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                       
+                       BorderColor="Orange">
+
+                    <StackLayout>
+                        <Label Text="এটি অনুষদ ট্যাব"
+                          FontAttributes="Bold"
+                          FontSize="18"
+                          HorizontalOptions="Center"
+                          VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- First Row - First Column -->
+                <Frame CornerRadius="20"
+              Margin="10"
+              BackgroundColor="#2B0B98"
+              FlexLayout.Grow="1"
+                  HeightRequest="150"
+                  WidthRequest="160"
+                  HorizontalOptions="Start"
+                  VerticalOptions="Start"
+                       
+                       BorderColor="Orange">
+
+
+                    <StackLayout>
+                        <Label Text="এটি অনুষদ ট্যাব"
+                      FontAttributes="Bold"
+                      FontSize="18"
+                      HorizontalOptions="Center"
+                      VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Frame>
+                <!-- First Row - Second Column -->
+                <Frame CornerRadius="20"
+              Margin="10"
+              BackgroundColor="#2B0B98"
+              FlexLayout.Grow="1"
+                   HeightRequest="150"
+                    WidthRequest="160"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                       
+                       BorderColor="Orange">
+
+                    <StackLayout>
+                        <Label Text="এটি অনুষদ ট্যাব"
+                          FontAttributes="Bold"
+                          FontSize="18"
+                          HorizontalOptions="Center"
+                          VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Frame>
+                <!-- Second Row - First Column -->
+                <Frame CornerRadius="20"
+              Margin="10"
+              BackgroundColor="#2B0B98"
+              FlexLayout.Grow="1"
+                   HeightRequest="150"
+WidthRequest="160"
+HorizontalOptions="Start"
+VerticalOptions="Start"
+                       
+                       BorderColor="Orange">
+
+                    <StackLayout>
+                        <Label Text="এটি অনুষদ ট্যাব"
+                          FontAttributes="Bold"
+                          FontSize="18"
+                          HorizontalOptions="Center"
+                          VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Second Row - Second Column -->
+                <Frame CornerRadius="20"
+              Margin="10"
+              BackgroundColor="#2B0B98"
+              FlexLayout.Grow="1"
+                   HeightRequest="150"
+                    WidthRequest="160"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                       
+                       BorderColor="Orange">
+
+                    <StackLayout>
+                        <Label Text="এটি অনুষদ ট্যাব"
+                          FontAttributes="Bold"
+                          FontSize="18"
+                          HorizontalOptions="Center"
+                          VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Frame>
+                <!-- First Row - First Column -->
+                <Frame CornerRadius="20"
+              Margin="10"
+              BackgroundColor="#2B0B98"
+              FlexLayout.Grow="1"
+                  HeightRequest="150"
+                  WidthRequest="160"
+                  HorizontalOptions="Start"
+                  VerticalOptions="Start"
+                       
+                       BorderColor="Orange">
+
+                    <StackLayout>
+                        <Label Text="এটি অনুষদ ট্যাব"
+                      FontAttributes="Bold"
+                      FontSize="18"
+                      HorizontalOptions="Center"
+                      VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Frame>
+                <!-- First Row - Second Column -->
+                <Frame CornerRadius="20"
+              Margin="10"
+              BackgroundColor="#2B0B98"
+              FlexLayout.Grow="1"
+                   HeightRequest="150"
+                    WidthRequest="160"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                       
+                       BorderColor="Orange">
+
+                    <StackLayout>
+                        <Label Text="এটি অনুষদ ট্যাব"
+                          FontAttributes="Bold"
+                          FontSize="18"
+                          HorizontalOptions="Center"
+                          VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Frame>
+                <!-- Second Row - First Column -->
+                <Frame CornerRadius="20"
+              Margin="10"
+              BackgroundColor="#2B0B98"
+              FlexLayout.Grow="1"
+                   HeightRequest="150"
+WidthRequest="160"
+HorizontalOptions="Start"
+VerticalOptions="Start"
+                       
+                       BorderColor="Orange">
+
+                    <StackLayout>
+                        <Label Text="এটি অনুষদ ট্যাব"
+                          FontAttributes="Bold"
+                          FontSize="18"
+                          HorizontalOptions="Center"
+                          VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Second Row - Second Column -->
+                <Frame CornerRadius="20"
+              Margin="10"
+              BackgroundColor="#2B0B98"
+              FlexLayout.Grow="1"
+                   HeightRequest="150"
+                    WidthRequest="160"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                       
+                       BorderColor="Orange">
+
+                    <StackLayout>
+                        <Label Text="এটি অনুষদ ট্যাব"
+                          FontAttributes="Bold"
+                          FontSize="18"
+                          HorizontalOptions="Center"
+                          VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Frame>
+            </FlexLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage Title="প্রশাসনিক" IconImageSource="administration">
+
+        <Border StrokeThickness="4"
+          WidthRequest="180"
+          HeightRequest="150"
+          StrokeShape="RoundRectangle 40"
+          Background="#2B0B98"
+          Padding="1,8"
+          Margin="18,30"
+          HorizontalOptions="Start"
+          VerticalOptions="Start"
+                
+                      >
+
+            <Border.Stroke>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="Orange"
+                    Offset="0.1" />
+                    <GradientStop Color="Brown"
+                    Offset="1.0" />
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Label Text="এটি প্রশাসনিক ট্যাব"
+         Margin="20"
+         FontAttributes="Bold"
+         FontSize="18"
+         HorizontalOptions="Center"
+         VerticalOptions="Center" />
+        </Border>
+    </ContentPage>
+
+    <ContentPage Title="সেবাসমূহ" IconImageSource="services">
+
+        <Border StrokeThickness="4"
+          WidthRequest="180"
+          HeightRequest="150"
+          StrokeShape="RoundRectangle 40"
+          Background="#2B0B98"
+          Padding="1,8"
+          Margin="18,30"
+          HorizontalOptions="Start"
+          VerticalOptions="Start">
+
+            <Border.Stroke>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="Orange"
+                    Offset="0.1" />
+                    <GradientStop Color="Brown"
+                    Offset="1.0" />
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Label Text="এটি সেবাসমূহ ট্যাব"
+         Margin="20"
+         FontAttributes="Bold"
+         FontSize="18"
+         HorizontalOptions="Center"
+         VerticalOptions="Center" />
+        </Border>
+    </ContentPage>
+
+    <ContentPage Title="অন্যান্য" IconImageSource="others">
+
+        <Border StrokeThickness="4"
+            WidthRequest="180"
+            HeightRequest="150"
+            StrokeShape="RoundRectangle 40"
+            Background="#2B0B98"
+            Padding="1,8"
+            Margin="18,30"
+            HorizontalOptions="Start"
+            VerticalOptions="Start">
+
+            <Border.Stroke>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="Orange"
+                  Offset="0.1" />
+                    <GradientStop Color="Brown"
+                  Offset="1.0" />
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Label Text="এটি অন্যান্য ট্যাব"
+               Margin="20"
+               FontAttributes="Bold"
+               FontSize="18"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        </Border>
+    </ContentPage>
+</TabbedPage>

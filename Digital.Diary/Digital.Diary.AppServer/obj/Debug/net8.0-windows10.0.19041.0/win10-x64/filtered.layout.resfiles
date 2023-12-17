@@ -1,5 +1,6 @@
 OpenSans-Regular.ttf
 OpenSans-Semibold.ttf
+administration.scale-100.png
 appicon.ico
 appiconLargeTile.scale-100.png
 appiconLargeTile.scale-125.png
@@ -51,6 +52,17 @@ dotnet_bot.scale-125.png
 dotnet_bot.scale-150.png
 dotnet_bot.scale-200.png
 dotnet_bot.scale-400.png
+faculty.scale-100.png
+faculty.scale-125.png
+faculty.scale-150.png
+faculty.scale-200.png
+faculty.scale-400.png
+others.scale-100.png
+others.scale-125.png
+others.scale-150.png
+others.scale-200.png
+others.scale-400.png
+services.scale-100.png
 splashSplashScreen.scale-100.png
 splashSplashScreen.scale-125.png
 splashSplashScreen.scale-150.png

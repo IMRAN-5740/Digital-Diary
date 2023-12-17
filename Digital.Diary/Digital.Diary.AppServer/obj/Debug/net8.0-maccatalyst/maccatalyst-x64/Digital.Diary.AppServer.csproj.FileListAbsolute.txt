@@ -258,6 +258,17 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatal
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\others@3x.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\others@2x.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\others.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\faculty@3x.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\faculty@2x.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\faculty.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\services.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\administration.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -270,9 +281,6 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatal
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
-E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
-E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
-E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.stamp

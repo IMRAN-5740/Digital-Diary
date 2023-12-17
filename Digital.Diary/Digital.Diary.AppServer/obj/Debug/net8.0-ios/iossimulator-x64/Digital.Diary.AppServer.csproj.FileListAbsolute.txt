@@ -269,6 +269,14 @@ E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\ioss
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@2x.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@3x.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\mauisplash.stamp
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\others@3x.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\others@2x.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\others.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\faculty@3x.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\faculty@2x.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\faculty.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\administration.png
+E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\services.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
 E:\Digital Diary\Digital.Diary\Digital.Diary.AppServer\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png

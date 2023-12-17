@@ -1,4 +1,6 @@
-﻿namespace Digital.Diary.AppServer
+﻿using Digital.Diary.src.Host;
+
+namespace Digital.Diary.AppServer
 {
     public partial class App : Application
     {
@@ -6,7 +8,8 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            //MainPage = new AppShell();
+            MainPage = new HomePage();
         }
     }
 }
