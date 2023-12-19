@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Digital.Diary.AppServer.Services.Academic;
+using Digital.Diary.AppServer.ViewModels;
+using Digital.Diary.AppServer.Views.Academic;
+using Microsoft.Extensions.Logging;
 
 namespace Digital.Diary.AppServer
 {
@@ -16,8 +19,18 @@ namespace Digital.Diary.AppServer
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
+            //services
+            builder.Services.AddSingleton<IFacultyService, FacultyService>();
+
+            //viewModels
+            builder.Services.AddSingleton<MainVm>();
+            builder.Services.AddSingleton<FacultyDetailVm>();
+
+            //pages
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<FacultyDetailPage>();
 
             return builder.Build();
         }
