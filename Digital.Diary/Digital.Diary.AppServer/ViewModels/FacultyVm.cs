@@ -2,30 +2,24 @@
 using CommunityToolkit.Mvvm.Input;
 using Digital.Diary.AppServer.Models.Academic;
 using Digital.Diary.AppServer.Services.Academic;
-using Digital.Diary.AppServer.Views.Academic;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Digital.Diary.AppServer.ViewModels
 {
-    public partial class MainVm : BaseVm
+    public partial class FacultyVm : BaseVm
     {
-        private readonly IFacultyService _facultyService;
+        private readonly IFacultyService _service;
 
-        public MainVm(IFacultyService facultyService)
+        public FacultyVm(IFacultyService service)
         {
-            _facultyService = facultyService;
+            _service = service;
         }
 
         [ObservableProperty]
         private bool isRefreshing;
 
         [ObservableProperty]
-        private ObservableCollection<FacultyAppModel> faculties;
+        private ObservableCollection<Faculty> faculties;
 
         [RelayCommand]
         private async Task OnRefreshing()
@@ -44,13 +38,7 @@ namespace Digital.Diary.AppServer.ViewModels
 
         public async Task LoadDataAsync()
         {
-            Faculties = new ObservableCollection<FacultyAppModel>(await _facultyService.GetFacultyAsync());
-        }
-
-        [RelayCommand]
-        private async void GoToDetail(FacultyAppModel entity)
-        {
-            await Shell.Current.GoToAsync($"{nameof(FacultyDetailPage)}?Id={entity.Id}");
+            Faculties = new ObservableCollection<Faculty>(await _service.GetFacultyAsync());
         }
     }
 }

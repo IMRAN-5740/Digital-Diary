@@ -9,8 +9,6 @@ namespace Digital.Diary.AppServer.Services.Academic
 {
     public interface IFacultyService
     {
-        Task<IEnumerable<FacultyAppModel>> GetFacultyAsync();
-
-        Task<FacultyAppModel> GotoFacultyByIdAsync(string id);
+        Task<IEnumerable<Faculty>> GetFacultyAsync();
     }
 }

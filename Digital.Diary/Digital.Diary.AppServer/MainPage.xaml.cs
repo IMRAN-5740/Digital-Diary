@@ -1,31 +1,21 @@
-﻿using Digital.Diary.AppServer.Models.Academic;
-using Digital.Diary.AppServer.ViewModels;
-using System.Collections.ObjectModel;
+﻿using Digital.Diary.AppServer.ViewModels;
 
 namespace Digital.Diary.AppServer
 {
     public partial class MainPage : ContentPage
     {
-        private readonly HttpClient _httpClient = new();
-        private const string BaseAddress = "https://61vf52vz-5116.inc1.devtunnels.ms";
-        public MainVm MainVm { get; }
+        public FacultyVm fViewModel { get; }
 
-        public MainPage(MainVm mainVm)
+        public MainPage(FacultyVm mainViewModel)
         {
             InitializeComponent();
-            BindingContext = MainVm = mainVm;
+            BindingContext = fViewModel = mainViewModel;
         }
 
-        protected override async void OnAppearing()
+        protected override async void OnNavigatedTo(NavigatedToEventArgs args)
         {
-            base.OnAppearing();
-            await MainVm.LoadDataAsync();
+            base.OnNavigatedTo(args);
+            await fViewModel.LoadDataAsync();
         }
-
-        //private async void counterButton_Clicked(object sender, EventArgs e)
-        //{
-        //    var resultJson = await _httpClient.GetStringAsync($"{BaseAddress}/api/Department/GetAll/");
-        //    weatherResult.Text = resultJson;
-        //}
     }
 }

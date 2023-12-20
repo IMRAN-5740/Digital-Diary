@@ -8,11 +8,9 @@ using System.Threading.Tasks;
 
 namespace Digital.Diary.AppServer.Models.Academic
 {
-    public class FacultyAppModel
+    public class Faculty
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         public string FacultyName { get; set; } = default!;
-        public string? Description { get; set; }
-        public string ImageUrl { get; set; } = default!;
     }
 }

@@ -1,56 +1,26 @@
 ﻿using Digital.Diary.AppServer.Models.Academic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Net.Http.Json;
 
 namespace Digital.Diary.AppServer.Services.Academic
 {
     public class FacultyService : IFacultyService
     {
-        private readonly List<FacultyAppModel> _listofFaculty;
+        private readonly HttpClient _httpClient;
+        private const string BaseAddress = "https://61vf52vz-5116.inc1.devtunnels.ms/api/Faculty/GetAll";
+        private readonly List<Faculty> faculties;
 
-        public FacultyService()
+        public FacultyService(HttpClient httpClient)
         {
-            _listofFaculty = new List<FacultyAppModel>()
-            {
-                new FacultyAppModel
-                {
-                    Id="123",
-                    FacultyName="ইঞ্জিনিয়ারিং অনুষদ",
-                    ImageUrl="https://avatars.githubusercontent.com/u/89984763?v=4",
-                    Description="This is Engineering Faculty"
-                },
-                new FacultyAppModel
-                {
-                     Id="456",
-                    FacultyName="বিজ্ঞান অনুষদ",
-                    ImageUrl="https://avatars.githubusercontent.com/u/89984763?v=4",
-                },
-                 new FacultyAppModel
-                {
-                      Id="883",
-                    FacultyName="সামাজিক বিজ্ঞান অনুষদ",
-                    ImageUrl="https://avatars.githubusercontent.com/u/89984763?v=4",
-                },
-                   new FacultyAppModel
-                {
-                        Id="6723",
-                    FacultyName="আইন অনুষদ",
-                    ImageUrl="https://avatars.githubusercontent.com/u/89984763?v=4",
-                }
-            };
+            _httpClient = httpClient;
+            faculties = new List<Faculty>();
         }
 
-        public async Task<IEnumerable<FacultyAppModel>> GetFacultyAsync()
+        public async Task<IEnumerable<Faculty>> GetFacultyAsync()
         {
-            return _listofFaculty;
-        }
-
-        public async Task<FacultyAppModel> GotoFacultyByIdAsync(string id)
-        {
-            return _listofFaculty.Where(data => data.Id == id).FirstOrDefault();
+            var result = await _httpClient.GetAsync(BaseAddress);
+            var response = await result.Content.ReadFromJsonAsync<List<Faculty>>();
+            return response;
         }
     }
 }
