@@ -9,6 +9,7 @@ namespace Digital.Diary.AppServer.ViewModels
     public partial class FacultyVm : BaseVm
     {
         private readonly IFacultyService _service;
+        private int i = 0;
 
         public FacultyVm(IFacultyService service)
         {
@@ -36,9 +37,37 @@ namespace Digital.Diary.AppServer.ViewModels
             }
         }
 
+        private string GetImagePathForFaculty(Faculty faculty)
+        {
+            //string imageName = faculty.Identifier.ToString().ToLower();
+            int index = (int)i % imageNames.Count;
+            i += 1;
+            return $"Images/{imageNames[index]}";
+        }
+
         public async Task LoadDataAsync()
         {
-            Faculties = new ObservableCollection<Faculty>(await _service.GetFacultyAsync());
+            var facultiesData = await _service.GetFacultyAsync();
+
+            foreach (var faculty in facultiesData)
+            {
+                faculty.ImagePath = GetImagePathForFaculty(faculty);
+            }
+
+            Faculties = new ObservableCollection<Faculty>(facultiesData);
+            //Faculties = new ObservableCollection<Faculty>(await _service.GetFacultyAsync());
         }
+
+        private List<string> imageNames = new List<string>
+        {
+            "engineeringfaculty",
+            "sciencefaculty",
+            "biologyfaculty",
+            "businessfaculty",
+            "socialscience_faculty",
+            "humanitiesfaculty",
+            "lawfaculty",
+            "agriculturefaculty"
+        };
     }
 }

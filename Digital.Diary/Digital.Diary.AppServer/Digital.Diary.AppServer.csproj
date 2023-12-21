@@ -61,25 +61,76 @@
 	<ItemGroup>
 		
 	  <None Remove="Resources\Images\administration.png" />
+		
+	  <None Remove="Resources\Images\agriculturefaculty.png" />
+		
+	  <None Remove="Resources\Images\biologyfaculty.png" />
+		
+	  <None Remove="Resources\Images\businessfaculty.png" />
 	  <None Remove="Resources\Images\bx-info-circle.svg" />
+	  <None Remove="Resources\Images\engineeringfaculty.png" />
 	  <None Remove="Resources\Images\faculty.svg" />
+	  <None Remove="Resources\Images\humanitiesfaculty.png" />
 	  <None Remove="Resources\Images\information.png" />
 	  <None Remove="Resources\Images\information.svg" />
+	  <None Remove="Resources\Images\lawfaculty.png" />
+	  <None Remove="Resources\Images\sciencefaculty.png" />
 	  <None Remove="Resources\Images\services.png" />
+	  <None Remove="Resources\Images\socialsciencefaculty.png" />
+	  <None Remove="Resources\Images\socialscience_faculty.png" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="Microsoft.Extensions.Diagnostics" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\Academic\FacultyDetailPage.xaml">
+	  <MauiXaml Update="MainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\AdministratrixPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\FacultiesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Help.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\OthersPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\ServicesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Services\Academic\" />
+	  <Folder Include="Views\Academic\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\AdministratrixPage.xaml.cs">
+	    <DependentUpon>AdministratrixPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\FacultiesPage.xaml.cs">
+	    <DependentUpon>FacultiesPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\ServicesPage.xaml.cs">
+	    <DependentUpon>ServicesPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>

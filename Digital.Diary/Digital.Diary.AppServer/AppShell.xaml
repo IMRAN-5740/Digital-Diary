@@ -4,12 +4,44 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Digital.Diary.AppServer"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:pages="clr-namespace:Digital.Diary.AppServer.Pages"
     Shell.FlyoutBehavior="Disabled"
-    Title="Digital.Diary.AppServer">
+    Title="Digital.Diary.AppServer"
+    Shell.TabBarBackgroundColor="DarkSlateGray"
+    Shell.TabBarTitleColor="White"
+    Shell.BackgroundColor="DarkSlateGray"
+    Shell.TabBarUnselectedColor="White"
+    >
+    <Shell.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Secondary}" />
+    </Shell.Behaviors>
 
-    <ShellContent
-        Title="Home"
+    <TabBar>
+        <ShellContent
+            Title="অনুষদ"
+            Icon="faculty"
+            ContentTemplate="{DataTemplate pages:FacultiesPage}"
+            Route="FacultiesPage" />
+        <ShellContent
+            Title="প্রশাসন"
+            Icon="administration"
+            ContentTemplate="{DataTemplate pages:AdministratrixPage}"
+            Route="AdministratrixPage" />
+
+        <ShellContent
+             Title="সেবাসমূহ"
+             Icon="services"
+             ContentTemplate="{DataTemplate pages:ServicesPage}"
+             Route="ServicesPage" />
+        <ShellContent
+             Title="অন্যান্য"
+             Icon="others"
+             ContentTemplate="{DataTemplate pages:OthersPage}"
+             Route="OthersPage" />
+    </TabBar>
+    <!--<ShellContent
+        Title="Digital Diary"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+        Route="MainPage" />-->
 </Shell>

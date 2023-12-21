@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Digital.Diary.AppServer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace Digital.Diary.AppServer.Models.Academic
     {
         public Guid Id { get; set; }
         public string FacultyName { get; set; } = default!;
+        public string? ImagePath { get; set; }
     }
 }

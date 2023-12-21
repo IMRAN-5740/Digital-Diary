@@ -4,18 +4,18 @@ namespace Digital.Diary.AppServer
 {
     public partial class MainPage : ContentPage
     {
-        public FacultyVm fViewModel { get; }
+        //  public FacultyVm fViewModel { get; }
 
-        public MainPage(FacultyVm mainViewModel)
+        public MainPage(/*FacultyVm mainViewModel*/)
         {
             InitializeComponent();
-            BindingContext = fViewModel = mainViewModel;
+            // BindingContext = fViewModel = mainViewModel;
         }
 
-        protected override async void OnNavigatedTo(NavigatedToEventArgs args)
-        {
-            base.OnNavigatedTo(args);
-            await fViewModel.LoadDataAsync();
-        }
+        //protected override async void OnNavigatedTo(NavigatedToEventArgs args)
+        //{
+        //    base.OnNavigatedTo(args);
+        //    await fViewModel.LoadDataAsync();
+        //}
     }
 }

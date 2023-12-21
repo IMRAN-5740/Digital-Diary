@@ -22,5 +22,10 @@ namespace Digital.Diary.AppServer.Services.Academic
             var response = await result.Content.ReadFromJsonAsync<List<Faculty>>();
             return response;
         }
+
+        public void Dispose()
+        {
+            _httpClient.Dispose();
+        }
     }
 }
