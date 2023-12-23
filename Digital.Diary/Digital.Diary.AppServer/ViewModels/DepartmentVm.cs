@@ -108,15 +108,19 @@ namespace Digital.Diary.AppServer.ViewModels
             Departments = new ObservableCollection<Department>(departmentData);
         }
 
+        #region Engineering Faculty
+
         private List<string> engIcons = new List<string>
         {
-            "csedept.png",
+            "cse.png",
             "eee.png",
             "acce.png",
             "ce.png",
             "fe.png",
             "architect.png"
         };
+
+        #endregion Engineering Faculty
 
         #region Science Faculty
 

@@ -40,8 +40,13 @@
                                                VerticalOptions="CenterAndExpand" />
                                         </Frame>
                                         <StackLayout Grid.Row="1" Margin="10,5,10,10">
-                                            <Label Text="{Binding DeptName }" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center"
-                                                 VerticalTextAlignment="Start" />
+                                            <Label Text="{Binding DeptName }"
+                                                   TextColor="White"
+                                                   FontSize="15"
+                                                   FontAttributes="Bold"
+                                                   HorizontalTextAlignment="Center"
+                                                   VerticalTextAlignment="Start"
+                                                   HorizontalOptions="CenterAndExpand" />
                                         </StackLayout>
                                     </Grid>
                                 </Frame>

@@ -132,6 +132,65 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<MauiImage Include="Resources\Images\Engineeringfaculty\cse.png" />
+		<MauiImage Include="Resources\Images\Engineeringfaculty\eee.png" />
+		<MauiImage Include="Resources\Images\Engineeringfaculty\acce.png" />
+		<MauiImage Include="Resources\Images\Engineeringfaculty\ce.png" />
+		<MauiImage Include="Resources\Images\Engineeringfaculty\fe.png" />
+		<MauiImage Include="Resources\Images\Engineeringfaculty\architect.png" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<MauiImage Include="Resources\Images\sciencefaculty\chemistry.png" />
+		<MauiImage Include="Resources\Images\sciencefaculty\math.png" />
+		<MauiImage Include="Resources\Images\sciencefaculty\esd.png" />
+		<MauiImage Include="Resources\Images\sciencefaculty\phy.png" />
+		<MauiImage Include="Resources\Images\sciencefaculty\stat.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<MauiImage Include="Resources\Images\businessfaculty\ais.png" />
+		<MauiImage Include="Resources\Images\businessfaculty\fb.png" />
+		<MauiImage Include="Resources\Images\businessfaculty\management.png" />
+		<MauiImage Include="Resources\Images\businessfaculty\mkt.png" />
+		<MauiImage Include="Resources\Images\businessfaculty\thm.png" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<MauiImage Include="Resources\Images\biologyfaculty\bmb.png" />
+		<MauiImage Include="Resources\Images\biologyfaculty\botany.png" />
+		<MauiImage Include="Resources\Images\biologyfaculty\genetic.png" />
+		<MauiImage Include="Resources\Images\biologyfaculty\pharmacy.png" />
+		<MauiImage Include="Resources\Images\biologyfaculty\psy.png" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<MauiImage Include="Resources\Images\humanitiesfaculty\english.png" />
+		<MauiImage Include="Resources\Images\humanitiesfaculty\bangla.png" />
+		<MauiImage Include="Resources\Images\humanitiesfaculty\history.png" />
+	</ItemGroup>
+	<ItemGroup>
+		<MauiImage Include="Resources\Images\lawfaculty\lawdept.png" />
+		
+	</ItemGroup>
+
+	<ItemGroup>
+		<MauiImage Include="Resources\Images\socialsciencefaculty\eco.png" />
+		<MauiImage Include="Resources\Images\socialsciencefaculty\ir.png" />
+		<MauiImage Include="Resources\Images\socialsciencefaculty\soc.png" />
+		<MauiImage Include="Resources\Images\socialsciencefaculty\pad.png" />
+		<MauiImage Include="Resources\Images\socialsciencefaculty\ps.png" />
+
+	</ItemGroup>
+	<ItemGroup>
+		<MauiImage Include="Resources\Images\agriculturefaculty\agri.png" />
+		<MauiImage Include="Resources\Images\agriculturefaculty\asvm.png" />
+		<MauiImage Include="Resources\Images\agriculturefaculty\fmb.png" />
+
+	</ItemGroup>
+	<ItemGroup>
 	  <Compile Update="Pages\AdministratrixPage.xaml.cs">
 	    <DependentUpon>AdministratrixPage.xaml</DependentUpon>
 	  </Compile>
