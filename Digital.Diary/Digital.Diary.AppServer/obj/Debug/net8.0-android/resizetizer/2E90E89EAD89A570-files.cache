@@ -1,5 +1,14 @@
 ﻿obj\Debug\net8.0-android\resizetizer\r\drawable\administration.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\agriculturefaculty.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\biologyfaculty.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\businessfaculty.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\engineeringfaculty.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\humanitiesfaculty.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\lawfaculty.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\sciencefaculty.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\services.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\socialsciencefaculty.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\socialscience_faculty.png
 obj\Debug\net8.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 obj\Debug\net8.0-android\resizetizer\r\drawable-hdpi\faculty.png
 obj\Debug\net8.0-android\resizetizer\r\drawable-hdpi\others.png

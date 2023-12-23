@@ -9,11 +9,13 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     [ApiController]
     public class FacultyController : ControllerBase
     {
-        private IFacultyService _service;
+        private readonly IFacultyService _service;
+        private readonly IDepartmentService _deptService;
 
-        public FacultyController(IFacultyService service)
+        public FacultyController(IFacultyService service, IDepartmentService deptService)
         {
             _service = service;
+            _deptService = deptService;
         }
 
         [HttpGet]
@@ -21,7 +23,6 @@ namespace Digital.Diary.WebServer.Controllers.Academic
         public IActionResult GetAll()
         {
             var entities = _service.GetAll();
-
             if (!entities.Any())
             {
                 return BadRequest("No entity Found");
@@ -34,10 +35,37 @@ namespace Digital.Diary.WebServer.Controllers.Academic
                 {
                     Id = entity.Id,
                     FacultyName = entity.FacultyName,
+                    ShortName = entity.ShortName,
                 };
                 entityListVMs.Add(entityVm);
             }
             return Ok(entityListVMs);
+        }
+
+        [HttpGet]
+        [Route("{id:Guid}")]
+        public IActionResult GetAllDeptByFacultyId(Guid id)
+        {
+            var entities = _deptService.GetAll().Where(data => data.FacultyId == id).OrderBy(data => data.Sequence);
+            if (!entities.Any())
+            {
+                return BadRequest("No entity Found");
+            }
+            var deptListVm = new List<DepartmentVm>();
+
+            foreach (var entity in entities)
+            {
+                var fact = _service.GetFirstOrDefault(data => data.Id == entity.FacultyId);
+                var dept = new DepartmentVm()
+                {
+                    Id = entity.Id,
+                    DeptName = entity.DeptName,
+                    FacultyName = fact.FacultyName,
+                    ShortName = fact.ShortName,
+                };
+                deptListVm.Add(dept);
+            }
+            return Ok(deptListVm);
         }
 
         [HttpPost]

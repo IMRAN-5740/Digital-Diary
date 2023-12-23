@@ -3,6 +3,7 @@ using Digital.Diary.AppServer.ViewModels;
 using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
 using Digital.Diary.AppServer.Pages;
+using Digital.Diary.AppServer.Pages.Academic;
 
 namespace Digital.Diary.AppServer
 {
@@ -20,6 +21,11 @@ namespace Digital.Diary.AppServer
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 })
                 .UseMauiCommunityToolkit();
+            builder.Services.AddHttpClient(Constants.AppConstants.HttpClientName, httpClient =>
+            {
+                var baseAddress = "https://61vf52vz-5116.inc1.devtunnels.ms/api/";
+                httpClient.BaseAddress = new Uri(baseAddress);
+            });
 
 #if DEBUG
             builder.Logging.AddDebug();
@@ -28,11 +34,15 @@ namespace Digital.Diary.AppServer
             //Services
             builder.Services.AddTransient<HttpClient>();
             builder.Services.AddTransient<IFacultyService, FacultyService>();
+            builder.Services.AddTransient<IDepartmentService, DepartmentService>();
+
             //ViewModels
             builder.Services.AddTransient<FacultyVm>();
-            //pages
-            builder.Services.AddTransient<MainPage>();
+            builder.Services.AddTransient<DepartmentVm>();
+            //AddTransient
+            builder.Services.AddSingleton<MainPage>();
             builder.Services.AddTransient<FacultiesPage>();
+            builder.Services.AddTransient<DepartmentPage>();
             return builder.Build();
         }
     }

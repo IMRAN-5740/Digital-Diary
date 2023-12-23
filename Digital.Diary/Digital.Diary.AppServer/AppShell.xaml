@@ -11,12 +11,10 @@
     Shell.TabBarBackgroundColor="DarkSlateGray"
     Shell.TabBarTitleColor="White"
     Shell.BackgroundColor="DarkSlateGray"
-    Shell.TabBarUnselectedColor="White"
-    >
+    Shell.TabBarUnselectedColor="White">
     <Shell.Behaviors>
         <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Secondary}" />
     </Shell.Behaviors>
-
     <TabBar>
         <ShellContent
             Title="অনুষদ"

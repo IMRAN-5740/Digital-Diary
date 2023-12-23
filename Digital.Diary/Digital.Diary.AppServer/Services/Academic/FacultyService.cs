@@ -1,31 +1,31 @@
-﻿using Digital.Diary.AppServer.Models.Academic;
-using Newtonsoft.Json;
+﻿using Digital.Diary.AppServer.Constants;
+using Digital.Diary.AppServer.Models.Academic;
 using System.Net.Http.Json;
 
 namespace Digital.Diary.AppServer.Services.Academic
 {
     public class FacultyService : IFacultyService
     {
-        private readonly HttpClient _httpClient;
-        private const string BaseAddress = "https://61vf52vz-5116.inc1.devtunnels.ms/api/Faculty/GetAll";
-        private readonly List<Faculty> faculties;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public FacultyService(HttpClient httpClient)
+        public FacultyService(IHttpClientFactory httpClientFactory)
         {
-            _httpClient = httpClient;
-            faculties = new List<Faculty>();
+            _httpClientFactory = httpClientFactory;
         }
 
         public async Task<IEnumerable<Faculty>> GetFacultyAsync()
         {
-            var result = await _httpClient.GetAsync(BaseAddress);
-            var response = await result.Content.ReadFromJsonAsync<List<Faculty>>();
-            return response;
-        }
-
-        public void Dispose()
-        {
-            _httpClient.Dispose();
+            var httpClient = _httpClientFactory.CreateClient(AppConstants.HttpClientName);
+            var response = await httpClient.GetAsync("Faculty/GetAll");
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<List<Faculty>>();
+                return result;
+            }
+            else
+            {
+                return Enumerable.Empty<Faculty>();
+            }
         }
     }
 }

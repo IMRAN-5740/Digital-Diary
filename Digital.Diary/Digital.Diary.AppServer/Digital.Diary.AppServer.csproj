@@ -60,8 +60,6 @@
 
 	<ItemGroup>
 		
-	  <None Remove="Resources\Images\administration.png" />
-		
 	  <None Remove="Resources\Images\agriculturefaculty.png" />
 		
 	  <None Remove="Resources\Images\biologyfaculty.png" />
@@ -117,8 +115,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Services\Academic\" />
+	  <Folder Include="Pages\Academic\" />
 	  <Folder Include="Views\Academic\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\faculties\agriculturefaculty.png" />
+	  <MauiImage Include="Resources\Images\faculties\biologyfaculty.png" />
+	  <MauiImage Include="Resources\Images\faculties\businessfaculty.png" />
+	  <MauiImage Include="Resources\Images\faculties\engineeringfaculty.png" />
+	  <MauiImage Include="Resources\Images\faculties\humanitiesfaculty.png" />
+	  <MauiImage Include="Resources\Images\faculties\lawfaculty.png" />
+	  <MauiImage Include="Resources\Images\faculties\sciencefaculty.png" />
+	  <MauiImage Include="Resources\Images\faculties\socialsciencefaculty.png" />
+	  <MauiImage Include="Resources\Images\faculties\socialscience_faculty.png" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -11,6 +11,8 @@ namespace Digital.Diary.Models.EntityModels.Academic
         [DisplayName("Faculty Name")]
         public string FacultyName { get; set; } = default!;
 
+        public string ShortName { get; set; } = default!;
+
         public ICollection<Department>? Departments { get; set; } = new List<Department>();
         public ICollection<Teacher>? Teachers { get; set; } = new List<Teacher>();
         public ICollection<Dean>? Deans { get; set; } = new List<Dean>();

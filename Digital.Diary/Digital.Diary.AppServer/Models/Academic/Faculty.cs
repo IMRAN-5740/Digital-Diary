@@ -13,6 +13,7 @@ namespace Digital.Diary.AppServer.Models.Academic
     {
         public Guid Id { get; set; }
         public string FacultyName { get; set; } = default!;
+        public string? ShortName { get; set; }
         public string? ImagePath { get; set; }
     }
 }

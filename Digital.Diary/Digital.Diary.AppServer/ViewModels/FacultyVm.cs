@@ -1,7 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Digital.Diary.AppServer.Models.Academic;
+using Digital.Diary.AppServer.Pages.Academic;
 using Digital.Diary.AppServer.Services.Academic;
+using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
 namespace Digital.Diary.AppServer.ViewModels
@@ -26,7 +28,6 @@ namespace Digital.Diary.AppServer.ViewModels
         private async Task OnRefreshing()
         {
             IsRefreshing = true;
-
             try
             {
                 await LoadDataAsync();
@@ -39,10 +40,9 @@ namespace Digital.Diary.AppServer.ViewModels
 
         private string GetImagePathForFaculty(Faculty faculty)
         {
-            //string imageName = faculty.Identifier.ToString().ToLower();
             int index = (int)i % imageNames.Count;
             i += 1;
-            return $"Images/{imageNames[index]}";
+            return $"Images/faculties/{imageNames[index]}";
         }
 
         public async Task LoadDataAsync()
@@ -55,7 +55,6 @@ namespace Digital.Diary.AppServer.ViewModels
             }
 
             Faculties = new ObservableCollection<Faculty>(facultiesData);
-            //Faculties = new ObservableCollection<Faculty>(await _service.GetFacultyAsync());
         }
 
         private List<string> imageNames = new List<string>
@@ -69,5 +68,17 @@ namespace Digital.Diary.AppServer.ViewModels
             "lawfaculty",
             "agriculturefaculty"
         };
+
+        [RelayCommand]
+        private async void GoToDepartments(Faculty faculty)
+        {
+            await Shell.Current.GoToAsync($"DepartmentPage", true,
+                new Dictionary<string, object>
+                {
+                    {
+                        "Faculty",faculty
+                    }
+                });
+        }
     }
 }

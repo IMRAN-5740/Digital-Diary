@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Digital.Diary.AppServer.Pages.Academic.DepartmentPage"
+              xmlns:vm="clr-namespace:Digital.Diary.AppServer.ViewModels"
+              xmlns:m="clr-namespace:Digital.Diary.AppServer.Models.Academic"
+              Title="DepartmentPage"
+              x:DataType="vm:DepartmentVm">
+    <Shell.TitleView>
+        <Grid>
+            <Label Text="বিভাগ সমূহ" TextColor="White" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
+        </Grid>
+    </Shell.TitleView>
+    <StackLayout>
+        <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshingCommand}">
+            <CollectionView ItemsSource="{Binding Departments }" RemainingItemsThreshold="10">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="m:Department">
+                        <SwipeView>
+                            <StackLayout>
+                                <Frame Padding="10" Margin="3" BackgroundColor="Green"
+                                   WidthRequest="180"
+                                   HeightRequest="170"
+                                   BorderColor="Black">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Frame HeightRequest="100" WidthRequest="100" CornerRadius="100" HasShadow="False">
+                                            <Image Source="{Binding ImagePath}"
+                                               Aspect="AspectFill"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="CenterAndExpand" />
+                                        </Frame>
+                                        <StackLayout Grid.Row="1" Margin="10,5,10,10">
+                                            <Label Text="{Binding DeptName }" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                                                 VerticalTextAlignment="Start" />
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </StackLayout>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </StackLayout>
+</ContentPage>

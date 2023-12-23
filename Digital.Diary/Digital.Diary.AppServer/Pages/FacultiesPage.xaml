@@ -4,8 +4,7 @@
              x:Class="Digital.Diary.AppServer.Pages.FacultiesPage"
              xmlns:vm="clr-namespace:Digital.Diary.AppServer.ViewModels"
              xmlns:m="clr-namespace:Digital.Diary.AppServer.Models.Academic"
-             x:DataType="vm:FacultyVm"
-             >
+             x:DataType="vm:FacultyVm">
     <Shell.TitleView>
         <Grid>
             <Label Text="অনুষদ সমূহ" TextColor="White" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
@@ -43,8 +42,12 @@
                                             <!-- Adjusted VerticalOptions -->
                                         </Frame>
                                         <StackLayout Grid.Row="1" Margin="10,5,10,10">
-                                            <Label Text="{Binding FacultyName}" TextColor="White" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center"
-                                                   VerticalTextAlignment="Start" />
+                                            <Label Text="{Binding FacultyName}" TextColor="White" FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Start">
+                                                <Label.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:FacultyVm}}, Path=GoToDepartmentsCommand}" CommandParameter="{Binding .}" />
+                                                </Label.GestureRecognizers>
+                                            </Label>
                                         </StackLayout>
                                     </Grid>
                                 </Frame>

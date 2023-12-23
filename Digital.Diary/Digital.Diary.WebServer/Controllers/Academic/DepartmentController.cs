@@ -11,11 +11,15 @@ namespace Digital.Diary.WebServer.Controllers.Academic
     {
         private readonly IDepartmentService _service;
         private readonly IFacultyService _fService;
+        private readonly ITeacherService _tService;
+        private readonly IDesignationService _dService;
 
-        public DepartmentController(IDepartmentService service, IFacultyService fService)
+        public DepartmentController(IDepartmentService service, IFacultyService fService, ITeacherService tService, IDesignationService dService)
         {
             _service = service;
             _fService = fService;
+            _tService = tService;
+            _dService = dService;
         }
 
         [HttpGet]
@@ -31,18 +35,50 @@ namespace Digital.Diary.WebServer.Controllers.Academic
 
             foreach (var entity in entities)
             {
-                var fName = _fService.GetFirstOrDefault(x => x.Id == entity.FacultyId).FacultyName;
+                var fName = _fService.GetFirstOrDefault(x => x.Id == entity.FacultyId);
 
                 var entityVm = new DepartmentVm()
                 {
                     Id = entity.Id,
                     DeptName = entity.DeptName,
                     FacultyId = entity.FacultyId,
-                    FacultyName = fName,
+                    FacultyName = fName.FacultyName,
+                    Sequence = entity.Sequence,
+                    ShortName = fName.ShortName,
                 };
                 entityListVMs.Add(entityVm);
             }
             return Ok(entityListVMs);
+        }
+
+        [HttpGet]
+        [Route("{id:Guid}")]
+        public IActionResult GetAllTeacherByDeptId(Guid id)
+        {
+            var entities = _tService.GetAll().Where(data => data.DepartmentId == id);
+            if (!entities.Any())
+            {
+                return BadRequest("No entity Found");
+            }
+            var teacherListVm = new List<TeacherVm>();
+
+            foreach (var entity in entities)
+            {
+                var dept = _service.GetFirstOrDefault(data => data.Id == entity.DepartmentId).DeptName;
+                var degName = _dService.GetFirstOrDefault(data => data.Id == entity.DesignationId).DesignationName;
+                var teacher = new TeacherVm()
+                {
+                    Id = entity.Id,
+                    Name = entity.Name,
+                    Email = entity.Email,
+                    PhoneNum = entity.PhoneNum,
+                    ProfileImage = entity.ProfileImage,
+                    DepartmentName = dept,
+                    DesignationName = degName,
+                };
+                teacherListVm.Add(teacher);
+            }
+            return Ok(teacherListVm);
         }
 
         [HttpPost]

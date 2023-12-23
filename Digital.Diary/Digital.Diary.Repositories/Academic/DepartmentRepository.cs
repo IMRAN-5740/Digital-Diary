@@ -22,10 +22,12 @@ namespace Digital.Diary.Repositories.Academic
         {
             var result = from d in _dbContext.Set<Department>()
                          join f in _dbContext.Faculties on d.FacultyId equals f.Id
+                         orderby d.Sequence
                          select new Department
                          {
                              Id = d.Id,
                              DeptName = d.DeptName,
+                             Sequence = d.Sequence,
                              FacultyId = d.FacultyId
                          };
             return result.ToList();
