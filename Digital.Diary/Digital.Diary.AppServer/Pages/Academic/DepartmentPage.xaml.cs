@@ -1,4 +1,4 @@
-using Digital.Diary.AppServer.ViewModels;
+using Digital.Diary.AppServer.ViewModels.Academic;
 
 namespace Digital.Diary.AppServer.Pages.Academic;
 

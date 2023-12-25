@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Digital.Diary.AppServer.Pages.Academic.DepartmentPage"
-              xmlns:vm="clr-namespace:Digital.Diary.AppServer.ViewModels.Academic"
-              xmlns:m="clr-namespace:Digital.Diary.AppServer.Models.Academic"
-              Title="DepartmentPage"
-              x:DataType="vm:DepartmentVm">
+             x:Class="Digital.Diary.AppServer.Pages.HomePages.AdministratrixPage"
+             xmlns:vm="clr-namespace:Digital.Diary.AppServer.ViewModels.Administation"
+             xmlns:m="clr-namespace:Digital.Diary.AppServer.Models.Administration"
+             x:DataType="vm:OfficeVm"
+             Title="প্রশাসনিক সমূহ">
     <Shell.TitleView>
         <Grid>
-            <Label Text="বিভাগ সমূহ" TextColor="White" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Label Text="প্রশাসন সমূহ" TextColor="White" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
         </Grid>
     </Shell.TitleView>
     <StackLayout>
         <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshingCommand}">
-            <CollectionView ItemsSource="{Binding Departments }" RemainingItemsThreshold="10">
+            <CollectionView ItemsSource="{Binding Offices}" RemainingItemsThreshold="10">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" Span="2" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="m:Department">
+                    <DataTemplate x:DataType="m:Office">
                         <SwipeView>
                             <StackLayout>
                                 <Frame Padding="10" Margin="3" BackgroundColor="Green"
-                                   WidthRequest="180"
-                                   HeightRequest="170"
-                                   BorderColor="Black">
+                                  WidthRequest="180"
+                                  HeightRequest="170"
+                                  BorderColor="Black">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="*" />
@@ -35,18 +35,19 @@
                                         </Grid.ColumnDefinitions>
                                         <Frame HeightRequest="100" WidthRequest="100" CornerRadius="100" HasShadow="False">
                                             <Image Source="{Binding ImagePath}"
-                                               Aspect="AspectFill"
-                                               HorizontalOptions="Center"
-                                               VerticalOptions="CenterAndExpand" />
+                                              Aspect="AspectFill"
+                                              HorizontalOptions="Center"
+                                              VerticalOptions="CenterAndExpand" />
+
+                                            <!-- Adjusted VerticalOptions -->
                                         </Frame>
                                         <StackLayout Grid.Row="1" Margin="10,5,10,10">
-                                            <Label Text="{Binding DeptName }"
-                                                   TextColor="White"
-                                                   FontSize="15"
-                                                   FontAttributes="Bold"
-                                                   HorizontalTextAlignment="Center"
-                                                   VerticalTextAlignment="Start"
-                                                   HorizontalOptions="CenterAndExpand" />
+                                            <Label Text="{Binding OfficeName}" TextColor="White" FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                                            VerticalTextAlignment="Start">
+                                                <Label.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:OfficeVm}}, Path=GoToDepartmentsCommand}" CommandParameter="{Binding .}" />
+                                                </Label.GestureRecognizers>
+                                            </Label>
                                         </StackLayout>
                                     </Grid>
                                 </Frame>

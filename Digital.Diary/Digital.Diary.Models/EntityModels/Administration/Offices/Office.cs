@@ -7,6 +7,7 @@ namespace Digital.Diary.Models.EntityModels.Administration.Offices
     {
         public Guid Id { get; set; } = default!;
         public string OfficeName { get; set; } = default!;
+        public int OfficeLevel { get; set; }
         public ICollection<OfficeEmployee>? OfficeEmployees { get; set; } = new List<OfficeEmployee>();
     }
 }

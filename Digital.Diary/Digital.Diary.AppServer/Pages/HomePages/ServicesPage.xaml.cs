@@ -1,4 +1,4 @@
-namespace Digital.Diary.AppServer.Pages;
+namespace Digital.Diary.AppServer.Pages.HomePages;
 
 public partial class ServicesPage : ContentPage
 {

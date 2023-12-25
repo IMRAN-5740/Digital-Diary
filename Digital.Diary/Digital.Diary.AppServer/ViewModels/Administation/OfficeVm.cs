@@ -1,19 +1,17 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Digital.Diary.AppServer.Models.Academic;
-using Digital.Diary.AppServer.Pages.Academic;
-using Digital.Diary.AppServer.Services.Academic;
-using Newtonsoft.Json;
+using Digital.Diary.AppServer.Models.Administration;
+using Digital.Diary.AppServer.Services.Administration;
 using System.Collections.ObjectModel;
 
-namespace Digital.Diary.AppServer.ViewModels
+namespace Digital.Diary.AppServer.ViewModels.Administation
 {
-    public partial class FacultyVm : BaseVm
+    public partial class OfficeVm : BaseVm
     {
-        private readonly IFacultyService _service;
+        private readonly IOfficeService _service;
         private int i = 0;
 
-        public FacultyVm(IFacultyService service)
+        public OfficeVm(IOfficeService service)
         {
             _service = service;
         }
@@ -22,7 +20,7 @@ namespace Digital.Diary.AppServer.ViewModels
         private bool isRefreshing;
 
         [ObservableProperty]
-        private ObservableCollection<Faculty> faculties;
+        private ObservableCollection<Office> offices;
 
         [RelayCommand]
         private async Task OnRefreshing()
@@ -38,7 +36,7 @@ namespace Digital.Diary.AppServer.ViewModels
             }
         }
 
-        private string GetImagePathForFaculty(Faculty faculty)
+        private string GetImagePathForFaculty(Office office)
         {
             int index = (int)i % imageNames.Count;
             i += 1;
@@ -47,14 +45,14 @@ namespace Digital.Diary.AppServer.ViewModels
 
         public async Task LoadDataAsync()
         {
-            var facultiesData = await _service.GetFacultyAsync();
+            var officesData = await _service.GetOfficeAsync();
 
-            foreach (var faculty in facultiesData)
+            foreach (var off in officesData)
             {
-                faculty.ImagePath = GetImagePathForFaculty(faculty);
+                off.ImagePath = GetImagePathForFaculty(off);
             }
 
-            Faculties = new ObservableCollection<Faculty>(facultiesData);
+            Offices = new ObservableCollection<Office>(officesData);
         }
 
         private List<string> imageNames = new List<string>
@@ -70,13 +68,13 @@ namespace Digital.Diary.AppServer.ViewModels
         };
 
         [RelayCommand]
-        private async void GoToDepartments(Faculty faculty)
+        private async void GoToDepartments(Office office)
         {
             await Shell.Current.GoToAsync($"DepartmentPage", true,
                 new Dictionary<string, object>
                 {
                     {
-                        "Faculty",faculty
+                        "Office",office
                     }
                 });
         }

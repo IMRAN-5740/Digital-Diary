@@ -5,7 +5,7 @@ using Digital.Diary.AppServer.Services.Academic;
 using System;
 using System.Collections.ObjectModel;
 
-namespace Digital.Diary.AppServer.ViewModels
+namespace Digital.Diary.AppServer.ViewModels.Academic
 {
     [QueryProperty(nameof(Faculty), "Faculty")]
     public partial class DepartmentVm : BaseVm

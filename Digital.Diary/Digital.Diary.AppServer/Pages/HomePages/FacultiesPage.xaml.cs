@@ -1,6 +1,6 @@
-using Digital.Diary.AppServer.ViewModels;
+using Digital.Diary.AppServer.ViewModels.Academic;
 
-namespace Digital.Diary.AppServer.Pages;
+namespace Digital.Diary.AppServer.Pages.HomePages;
 
 public partial class FacultiesPage : ContentPage
 {

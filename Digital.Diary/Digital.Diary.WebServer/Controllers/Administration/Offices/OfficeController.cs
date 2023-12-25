@@ -1,5 +1,6 @@
 ﻿using Digital.Diary.Models.EntityModels.Administration.Offices;
 using Digital.Diary.Models.ViewModels.Administration.Offices;
+using Digital.Diary.Services.Abstractions.Academic;
 using Digital.Diary.Services.Abstractions.Administration.Offices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,10 +11,14 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Offices
     public class OfficeController : ControllerBase
     {
         private readonly IOfficeService _service;
+        private readonly IOfficeEmployeeService _employeeService;
+        private readonly IDesignationService _dService;
 
-        public OfficeController(IOfficeService service)
+        public OfficeController(IOfficeService service, IDesignationService dService, IOfficeEmployeeService employeeService)
         {
             _service = service;
+            _dService = dService;
+            _employeeService = employeeService;
         }
 
         [HttpGet]
@@ -34,10 +39,43 @@ namespace Digital.Diary.WebServer.Controllers.Administration.Offices
                 {
                     Id = entity.Id,
                     OfficeName = entity.OfficeName,
+                    OfficeLevel = entity.OfficeLevel,
                 };
                 entityListVMs.Add(entityVm);
             }
             return Ok(entityListVMs);
+        }
+
+        [HttpGet]
+        [Route("{id:Guid}")]
+        public IActionResult GetAllEmployeeByOfficeId(Guid id)
+        {
+            var entities = _employeeService.GetAll().Where(data => data.OfficeId == id);
+            if (!entities.Any())
+            {
+                return BadRequest("No entity Found");
+            }
+            var employeeListVm = new List<OfficeEmployeeVm>();
+
+            foreach (var entity in entities)
+            {
+                var fact = _service.GetFirstOrDefault(data => data.Id == entity.OfficeId).OfficeName;
+                var designation = _dService.GetFirstOrDefault(data => data.Id == entity.DesignationId).DesignationName;
+
+                var dept = new OfficeEmployeeVm()
+                {
+                    Id = entity.Id,
+                    Name = entity.Name,
+                    Email = entity.Email,
+                    PhoneNum = entity.PhoneNum,
+                    ProfileImage = entity.ProfileImage,
+                    OfficeId = entity.OfficeId,
+                    OfficeName = fact,
+                    DesignationName = designation
+                };
+                employeeListVm.Add(dept);
+            }
+            return Ok(employeeListVm);
         }
 
         [HttpPost]
